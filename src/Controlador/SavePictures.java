@@ -21,11 +21,10 @@ public class SavePictures {
         if(archivoFoto.exists()){
             Image ImaUser= new ImageIcon(ruta).getImage();
             ImageIcon iconofoto=new ImageIcon(ImaUser.getScaledInstance(45, 35, Image.SCALE_SMOOTH));
-//            ImageIcon iconofoto = new ImageIcon(ImaUser);
-            RegisterEmpleado.acountIcon.setIcon(iconofoto);
+            RegisterEmpleado.user.setIcon(iconofoto);
             
         }else{
-             RegisterEmpleado.acountIcon.setIcon(new ImageIcon("Vista/icons/Images/usuarioGrande.png"));
+             RegisterEmpleado.user.setIcon(new ImageIcon("Vista/icons/Images/usuarioGrande.png"));
         }
     }
 }

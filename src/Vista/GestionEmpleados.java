@@ -1,10 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package Vista;
 
+import Controlador.logica;
+import Modelo.Conexion;
+import java.awt.Color;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -12,15 +12,29 @@ import javax.swing.JOptionPane;
  */
 public class GestionEmpleados extends javax.swing.JFrame {
 
+    Object[] cabEmpleados = {"ID", "Nombre", "Apellido paterno", "Apellido materno"};
+    public static DefaultTableModel dtm = new DefaultTableModel();
+    private static String confirmPass = "";
+    
+
     /**
      * Creates new form GestionEmpleados
      */
     public GestionEmpleados() {
         initComponents();
         this.setLocationRelativeTo(null);
-        Grupo3.add(Sname);
-        Grupo3.add(Sid);
-        Sid.doClick();
+        Grupo3.add(btnSname);
+        Grupo3.add(btnSid);
+        btnSid.doClick();
+        dtm.setColumnIdentifiers(cabEmpleados);
+        tableEmpleados.setModel(dtm);
+        user.setText(Controlador.logica.userNow);
+        group.add(rbtnPV);
+        group.add(rbtnAdmin);
+        group.add(rbtnConta);
+        group.add(rbtnRh);
+        rbtnPV.doClick();
+        id.setVisible(false);
     }
 
     /**
@@ -31,34 +45,662 @@ public class GestionEmpleados extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         Grupo3 = new javax.swing.ButtonGroup();
-        jPanel1 = new javax.swing.JPanel();
+        jdActualizar = new javax.swing.JDialog();
+        jPanel11 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        btnDescarta = new javax.swing.JButton();
+        txtNombre = new javax.swing.JTextField();
+        btnRegistra = new javax.swing.JButton();
+        txtPaterno = new javax.swing.JTextField();
+        txtMaterno = new javax.swing.JTextField();
+        txtUbi = new javax.swing.JTextField();
+        txtTelefono = new javax.swing.JTextField();
+        txtMail = new javax.swing.JTextField();
+        txtFN = new javax.swing.JTextField();
+        txtFI = new javax.swing.JTextField();
+        comboEstado = new javax.swing.JComboBox<>();
+        id = new javax.swing.JLabel();
+        newCount = new javax.swing.JDialog();
+        jPsuperDialog = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        rbtnPV = new javax.swing.JRadioButton();
+        rbtnConta = new javax.swing.JRadioButton();
+        rbtnAdmin = new javax.swing.JRadioButton();
+        rbtnRh = new javax.swing.JRadioButton();
+        jLabel5 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        txtId = new javax.swing.JTextField();
+        labelId = new javax.swing.JLabel();
+        labelNameUsuario = new javax.swing.JLabel();
+        txtNameUsu = new javax.swing.JTextField();
+        passw = new javax.swing.JTextField();
+        labelPass = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        btnCreate = new javax.swing.JButton();
+        CPass = new javax.swing.JPasswordField();
         jPanel3 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
+        txtBusca = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        config = new javax.swing.JDialog();
+        jPanel1 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jPanel6 = new javax.swing.JPanel();
-        jPanel7 = new javax.swing.JPanel();
-        Sname = new javax.swing.JToggleButton();
-        jLabel4 = new javax.swing.JLabel();
-        Sid = new javax.swing.JToggleButton();
+        group = new javax.swing.ButtonGroup();
+        jPprincipal = new javax.swing.JPanel();
+        jPsuper = new javax.swing.JPanel();
+        GoToIn = new javax.swing.JLabel();
+        vacio = new javax.swing.JLabel();
+        jPtitulo = new javax.swing.JPanel();
+        labelTitulo = new javax.swing.JLabel();
+        user = new javax.swing.JLabel();
+        jPizquierdo = new javax.swing.JPanel();
+        jPhIzquierdo = new javax.swing.JPanel();
+        btnConsulta = new javax.swing.JButton();
+        btnAlta = new javax.swing.JButton();
+        btnActualiza = new javax.swing.JButton();
+        btnElimina = new javax.swing.JButton();
+        jPcentral = new javax.swing.JPanel();
+        jPbuscador = new javax.swing.JPanel();
+        btnSname = new javax.swing.JToggleButton();
+        jLseparador = new javax.swing.JLabel();
+        btnSid = new javax.swing.JToggleButton();
         FSearch = new javax.swing.JTextField();
         btnSearch = new javax.swing.JButton();
-        jPanel8 = new javax.swing.JPanel();
-        jPanel9 = new javax.swing.JPanel();
+        jPtable = new javax.swing.JPanel();
+        jPtable2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jPanel10 = new javax.swing.JPanel();
+        tableEmpleados = new javax.swing.JTable();
+
+        jdActualizar.setTitle("Actualizar Empleado");
+        jdActualizar.setMinimumSize(new java.awt.Dimension(500, 524));
+        jdActualizar.setModal(true);
+        jdActualizar.setSize(new java.awt.Dimension(500, 524));
+        jdActualizar.getContentPane().setLayout(new javax.swing.OverlayLayout(jdActualizar.getContentPane()));
+
+        jPanel11.setBackground(new java.awt.Color(140, 162, 192));
+        jPanel11.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(255, 255, 255)));
+        jPanel11.setMinimumSize(new java.awt.Dimension(499, 484));
+        jPanel11.setPreferredSize(new java.awt.Dimension(499, 484));
+        jPanel11.setLayout(new java.awt.GridBagLayout());
+
+        jLabel6.setFont(new java.awt.Font("Nimbus Mono PS", 0, 14)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel6.setText("Ubicacion");
+        jLabel6.setPreferredSize(new java.awt.Dimension(140, 18));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 6);
+        jPanel11.add(jLabel6, gridBagConstraints);
+
+        jLabel7.setFont(new java.awt.Font("Nimbus Mono PS", 0, 14)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel7.setText("Nombre");
+        jLabel7.setPreferredSize(new java.awt.Dimension(140, 18));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 6);
+        jPanel11.add(jLabel7, gridBagConstraints);
+
+        jLabel9.setFont(new java.awt.Font("Nimbus Mono PS", 0, 14)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel9.setText("Apellido paterno");
+        jLabel9.setPreferredSize(new java.awt.Dimension(140, 18));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 6);
+        jPanel11.add(jLabel9, gridBagConstraints);
+
+        jLabel11.setFont(new java.awt.Font("Nimbus Mono PS", 0, 14)); // NOI18N
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel11.setText("Apellido materno");
+        jLabel11.setPreferredSize(new java.awt.Dimension(140, 18));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 6);
+        jPanel11.add(jLabel11, gridBagConstraints);
+
+        jLabel13.setFont(new java.awt.Font("Nimbus Mono PS", 0, 14)); // NOI18N
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel13.setText(" Fecha  de nacimiento");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 6);
+        jPanel11.add(jLabel13, gridBagConstraints);
+
+        jLabel15.setFont(new java.awt.Font("Nimbus Mono PS", 0, 14)); // NOI18N
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel15.setText("Fecha de ingreso");
+        jLabel15.setPreferredSize(new java.awt.Dimension(140, 18));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 6);
+        jPanel11.add(jLabel15, gridBagConstraints);
+
+        jLabel17.setFont(new java.awt.Font("Nimbus Mono PS", 0, 14)); // NOI18N
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel17.setText("Status");
+        jLabel17.setPreferredSize(new java.awt.Dimension(140, 18));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 6);
+        jPanel11.add(jLabel17, gridBagConstraints);
+
+        jLabel19.setFont(new java.awt.Font("Nimbus Mono PS", 0, 14)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel19.setText("Telefono");
+        jLabel19.setPreferredSize(new java.awt.Dimension(140, 18));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 6);
+        jPanel11.add(jLabel19, gridBagConstraints);
+
+        jLabel21.setFont(new java.awt.Font("Nimbus Mono PS", 0, 14)); // NOI18N
+        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel21.setText("E-mail");
+        jLabel21.setPreferredSize(new java.awt.Dimension(140, 18));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 6);
+        jPanel11.add(jLabel21, gridBagConstraints);
+
+        btnDescarta.setBackground(new java.awt.Color(150, 80, 80));
+        btnDescarta.setFont(new java.awt.Font("Nimbus Mono PS", 0, 14)); // NOI18N
+        btnDescarta.setText("Cancelar");
+        btnDescarta.setPreferredSize(new java.awt.Dimension(100, 25));
+        btnDescarta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDescartaActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 6);
+        jPanel11.add(btnDescarta, gridBagConstraints);
+
+        txtNombre.setFont(new java.awt.Font("Nimbus Mono PS", 0, 14)); // NOI18N
+        txtNombre.setMinimumSize(new java.awt.Dimension(200, 20));
+        txtNombre.setPreferredSize(new java.awt.Dimension(300, 25));
+        txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombreKeyTyped(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 0);
+        jPanel11.add(txtNombre, gridBagConstraints);
+
+        btnRegistra.setBackground(new java.awt.Color(100, 150, 100));
+        btnRegistra.setFont(new java.awt.Font("Nimbus Mono PS", 0, 14)); // NOI18N
+        btnRegistra.setText("Registrar");
+        btnRegistra.setPreferredSize(new java.awt.Dimension(300, 25));
+        btnRegistra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistraActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 0);
+        jPanel11.add(btnRegistra, gridBagConstraints);
+
+        txtPaterno.setFont(new java.awt.Font("Nimbus Mono PS", 0, 14)); // NOI18N
+        txtPaterno.setMinimumSize(new java.awt.Dimension(200, 20));
+        txtPaterno.setPreferredSize(new java.awt.Dimension(300, 25));
+        txtPaterno.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPaternoKeyTyped(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 0);
+        jPanel11.add(txtPaterno, gridBagConstraints);
+
+        txtMaterno.setFont(new java.awt.Font("Nimbus Mono PS", 0, 14)); // NOI18N
+        txtMaterno.setMinimumSize(new java.awt.Dimension(200, 20));
+        txtMaterno.setPreferredSize(new java.awt.Dimension(300, 25));
+        txtMaterno.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtMaternoKeyTyped(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 0);
+        jPanel11.add(txtMaterno, gridBagConstraints);
+
+        txtUbi.setFont(new java.awt.Font("Nimbus Mono PS", 0, 14)); // NOI18N
+        txtUbi.setMinimumSize(new java.awt.Dimension(200, 20));
+        txtUbi.setPreferredSize(new java.awt.Dimension(300, 25));
+        txtUbi.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtUbiKeyTyped(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 0);
+        jPanel11.add(txtUbi, gridBagConstraints);
+
+        txtTelefono.setFont(new java.awt.Font("Nimbus Mono PS", 0, 14)); // NOI18N
+        txtTelefono.setMinimumSize(new java.awt.Dimension(200, 20));
+        txtTelefono.setPreferredSize(new java.awt.Dimension(300, 25));
+        txtTelefono.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtTelefonoKeyTyped(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 0);
+        jPanel11.add(txtTelefono, gridBagConstraints);
+
+        txtMail.setFont(new java.awt.Font("Nimbus Mono PS", 0, 14)); // NOI18N
+        txtMail.setMinimumSize(new java.awt.Dimension(200, 20));
+        txtMail.setPreferredSize(new java.awt.Dimension(300, 25));
+        txtMail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtMailActionPerformed(evt);
+            }
+        });
+        txtMail.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtMailKeyTyped(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 0);
+        jPanel11.add(txtMail, gridBagConstraints);
+
+        txtFN.setFont(new java.awt.Font("Nimbus Mono PS", 0, 14)); // NOI18N
+        txtFN.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtFN.setText("YYYY-MM-DD");
+        txtFN.setPreferredSize(new java.awt.Dimension(300, 25));
+        txtFN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtFNMouseClicked(evt);
+            }
+        });
+        txtFN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFNActionPerformed(evt);
+            }
+        });
+        txtFN.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtFNKeyTyped(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 0);
+        jPanel11.add(txtFN, gridBagConstraints);
+
+        txtFI.setFont(new java.awt.Font("Nimbus Mono PS", 0, 14)); // NOI18N
+        txtFI.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtFI.setText("YYYY-MM-DD");
+        txtFI.setPreferredSize(new java.awt.Dimension(300, 25));
+        txtFI.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtFIMouseClicked(evt);
+            }
+        });
+        txtFI.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtFIKeyTyped(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 0);
+        jPanel11.add(txtFI, gridBagConstraints);
+
+        comboEstado.setFont(new java.awt.Font("Nimbus Mono PS", 0, 14)); // NOI18N
+        comboEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Elegir...", "Activo", "A Prueba", "Baja Temporal", "Baja Definitiva" }));
+        comboEstado.setPreferredSize(new java.awt.Dimension(300, 25));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 10, 0);
+        jPanel11.add(comboEstado, gridBagConstraints);
+
+        id.setFont(new java.awt.Font("Nimbus Mono PS", 0, 14)); // NOI18N
+        id.setText("      ");
+        jPanel11.add(id, new java.awt.GridBagConstraints());
+
+        jdActualizar.getContentPane().add(jPanel11);
+
+        newCount.setTitle("Crea cuentas");
+        newCount.setSize(new java.awt.Dimension(870, 330));
+
+        jPsuperDialog.setBackground(new java.awt.Color(140, 162, 192));
+        jPsuperDialog.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(255, 255, 255)));
+        jPsuperDialog.setFont(new java.awt.Font("Z003", 3, 36)); // NOI18N
+        jPsuperDialog.setPreferredSize(new java.awt.Dimension(717, 100));
+        jPsuperDialog.setLayout(new java.awt.GridBagLayout());
+
+        jLabel4.setFont(new java.awt.Font("Z003", 0, 24)); // NOI18N
+        jLabel4.setText("Agregar cuentas para login");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 6;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 8, 0);
+        jPsuperDialog.add(jLabel4, gridBagConstraints);
+
+        rbtnPV.setBackground(new java.awt.Color(140, 162, 192));
+        rbtnPV.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 15)); // NOI18N
+        rbtnPV.setText("Punto de venta");
+        rbtnPV.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rbtnPVMouseClicked(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        jPsuperDialog.add(rbtnPV, gridBagConstraints);
+
+        rbtnConta.setBackground(new java.awt.Color(140, 162, 192));
+        rbtnConta.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 15)); // NOI18N
+        rbtnConta.setText("Contador");
+        rbtnConta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rbtnContaMouseClicked(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 2);
+        jPsuperDialog.add(rbtnConta, gridBagConstraints);
+
+        rbtnAdmin.setBackground(new java.awt.Color(140, 162, 192));
+        rbtnAdmin.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 15)); // NOI18N
+        rbtnAdmin.setText("Administrador");
+        rbtnAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rbtnAdminMouseClicked(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 7);
+        jPsuperDialog.add(rbtnAdmin, gridBagConstraints);
+
+        rbtnRh.setBackground(new java.awt.Color(140, 162, 192));
+        rbtnRh.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 15)); // NOI18N
+        rbtnRh.setText("RRHH");
+        rbtnRh.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rbtnRhMouseClicked(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 19);
+        jPsuperDialog.add(rbtnRh, gridBagConstraints);
+
+        jLabel5.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 15)); // NOI18N
+        jLabel5.setText("Tipo de usuario");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 11, 0);
+        jPsuperDialog.add(jLabel5, gridBagConstraints);
+
+        newCount.getContentPane().add(jPsuperDialog, java.awt.BorderLayout.PAGE_START);
+
+        jPanel2.setBackground(new java.awt.Color(140, 162, 192));
+        jPanel2.setPreferredSize(new java.awt.Dimension(717, 330));
+        jPanel2.setLayout(new java.awt.GridBagLayout());
+
+        txtId.setEditable(false);
+        txtId.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        txtId.setFocusable(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 180;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(45, 5, 0, 0);
+        jPanel2.add(txtId, gridBagConstraints);
+
+        labelId.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        labelId.setText("ID:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(48, 74, 0, 0);
+        jPanel2.add(labelId, gridBagConstraints);
+
+        labelNameUsuario.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        labelNameUsuario.setText("Nombre de usuario:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(48, 6, 0, 7);
+        jPanel2.add(labelNameUsuario, gridBagConstraints);
+
+        txtNameUsu.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 8;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 10;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 165;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(45, 10, 0, 6);
+        jPanel2.add(txtNameUsu, gridBagConstraints);
+
+        passw.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 143;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(64, 18, 0, 0);
+        jPanel2.add(passw, gridBagConstraints);
+
+        labelPass.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        labelPass.setText("Contraseña:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(67, 12, 0, 0);
+        jPanel2.add(labelPass, gridBagConstraints);
+
+        jLabel14.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        jLabel14.setText("Confirmar contraseña:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(67, 6, 0, 0);
+        jPanel2.add(jLabel14, gridBagConstraints);
+
+        btnCreate.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        btnCreate.setText("Crear cuenta");
+        btnCreate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 15;
+        gridBagConstraints.ipadx = 77;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(18, 0, 131, 3);
+        jPanel2.add(btnCreate, gridBagConstraints);
+
+        CPass.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        CPass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CPassActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 8;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 13;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 176;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(64, 1, 0, 6);
+        jPanel2.add(CPass, gridBagConstraints);
+
+        newCount.getContentPane().add(jPanel2, java.awt.BorderLayout.PAGE_END);
+
+        jPanel3.setBackground(new java.awt.Color(140, 162, 192));
+        jPanel3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(255, 255, 255)));
+        jPanel3.setMinimumSize(new java.awt.Dimension(100, 50));
+        jPanel3.setPreferredSize(new java.awt.Dimension(717, 50));
+
+        txtBusca.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        txtBusca.setToolTipText("Busca el id de un empleado");
+        txtBusca.setPreferredSize(new java.awt.Dimension(500, 24));
+        txtBusca.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtBuscaFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtBuscaFocusLost(evt);
+            }
+        });
+        txtBusca.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtBuscaMouseClicked(evt);
+            }
+        });
+        txtBusca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtBuscaActionPerformed(evt);
+            }
+        });
+        txtBusca.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtBuscaKeyTyped(evt);
+            }
+        });
+        jPanel3.add(txtBusca);
+
+        jButton1.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/zoom.png"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton1);
+
+        newCount.getContentPane().add(jPanel3, java.awt.BorderLayout.CENTER);
+
+        config.setTitle("Configuración");
+        config.getContentPane().setLayout(new javax.swing.OverlayLayout(config.getContentPane()));
+
+        jPanel1.setBackground(new java.awt.Color(140, 162, 192));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 5));
+
+        jButton2.setFont(new java.awt.Font("Nimbus Mono PS", 0, 18)); // NOI18N
+        jButton2.setText("Editar perfil");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(140, 162, 192), 5));
+        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton2.setMinimumSize(new java.awt.Dimension(126, 20));
+        jButton2.setPreferredSize(new java.awt.Dimension(126, 25));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setFont(new java.awt.Font("Nimbus Mono PS", 0, 18)); // NOI18N
+        jButton3.setText("Cerrar sesión");
+        jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(140, 162, 192), 5));
+        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton3.setMinimumSize(new java.awt.Dimension(126, 20));
+        jButton3.setPreferredSize(new java.awt.Dimension(126, 25));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 390, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 5, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(0, 5, Short.MAX_VALUE)))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 290, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 75, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, 0)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 75, Short.MAX_VALUE)))
+        );
+
+        config.getContentPane().add(jPanel1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setTitle("Gestión de empleados");
         setSize(new java.awt.Dimension(1000, 650));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -67,127 +709,170 @@ public class GestionEmpleados extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new javax.swing.OverlayLayout(getContentPane()));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new java.awt.BorderLayout());
+        jPprincipal.setBackground(new java.awt.Color(255, 255, 255));
+        jPprincipal.setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setBackground(new java.awt.Color(140, 162, 192));
+        jPsuper.setBackground(new java.awt.Color(140, 162, 192));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/Hous.png"))); // NOI18N
-        jLabel1.setText("Inicio");
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        GoToIn.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        GoToIn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/Hous.png"))); // NOI18N
+        GoToIn.setText("Inicio");
+        GoToIn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
+                GoToInMouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel1);
+        jPsuper.add(GoToIn);
 
-        jLabel2.setText("     ");
-        jPanel2.add(jLabel2);
+        vacio.setText("     ");
+        jPsuper.add(vacio);
 
-        jPanel4.setBackground(new java.awt.Color(250, 250, 250));
-        jPanel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
-        jPanel4.setPreferredSize(new java.awt.Dimension(700, 60));
-        jPanel4.setLayout(new java.awt.GridBagLayout());
+        jPtitulo.setBackground(new java.awt.Color(250, 250, 250));
+        jPtitulo.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
+        jPtitulo.setPreferredSize(new java.awt.Dimension(700, 60));
+        jPtitulo.setLayout(new java.awt.GridBagLayout());
 
-        jLabel3.setText("Gestión de empleados");
-        jPanel4.add(jLabel3, new java.awt.GridBagConstraints());
+        labelTitulo.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 24)); // NOI18N
+        labelTitulo.setForeground(new java.awt.Color(20, 20, 20));
+        labelTitulo.setText("Gestión de empleados");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 29);
+        jPtitulo.add(labelTitulo, gridBagConstraints);
 
-        jPanel2.add(jPanel4);
+        user.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/usuarioGrande.png"))); // NOI18N
+        user.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                userMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                userMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                userMouseExited(evt);
+            }
+        });
+        jPtitulo.add(user, new java.awt.GridBagConstraints());
 
-        jPanel1.add(jPanel2, java.awt.BorderLayout.PAGE_START);
+        jPsuper.add(jPtitulo);
 
-        jPanel3.setBackground(new java.awt.Color(140, 162, 192));
-        jPanel3.setPreferredSize(new java.awt.Dimension(200, 556));
+        jPprincipal.add(jPsuper, java.awt.BorderLayout.PAGE_START);
 
-        jPanel5.setBackground(new java.awt.Color(250, 250, 250));
-        jPanel5.setMinimumSize(new java.awt.Dimension(455, 180));
-        jPanel5.setPreferredSize(new java.awt.Dimension(190, 180));
-        jPanel5.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 12));
+        jPizquierdo.setBackground(new java.awt.Color(140, 162, 192));
+        jPizquierdo.setPreferredSize(new java.awt.Dimension(200, 556));
 
-        jButton4.setBackground(new java.awt.Color(113, 161, 166));
-        jButton4.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/accept.png"))); // NOI18N
-        jButton4.setText("Ver mas deatalles");
-        jButton4.setToolTipText("Alta a nuevo empleado");
-        jButton4.setPreferredSize(new java.awt.Dimension(170, 30));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        jPhIzquierdo.setBackground(new java.awt.Color(250, 250, 250));
+        jPhIzquierdo.setMinimumSize(new java.awt.Dimension(455, 220));
+        jPhIzquierdo.setPreferredSize(new java.awt.Dimension(190, 190));
+        jPhIzquierdo.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 12));
+
+        btnConsulta.setBackground(new java.awt.Color(113, 161, 166));
+        btnConsulta.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        btnConsulta.setForeground(new java.awt.Color(255, 255, 255));
+        btnConsulta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/accept.png"))); // NOI18N
+        btnConsulta.setText("Consultar");
+        btnConsulta.setToolTipText("Alta a nuevo empleado");
+        btnConsulta.setPreferredSize(new java.awt.Dimension(170, 30));
+        btnConsulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnConsultaActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton4);
+        jPhIzquierdo.add(btnConsulta);
 
-        jButton1.setBackground(new java.awt.Color(113, 161, 166));
-        jButton1.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/add.png"))); // NOI18N
-        jButton1.setText("Dar de alta");
-        jButton1.setToolTipText("Alta a nuevo empleado");
-        jButton1.setPreferredSize(new java.awt.Dimension(170, 30));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnAlta.setBackground(new java.awt.Color(113, 161, 166));
+        btnAlta.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        btnAlta.setForeground(new java.awt.Color(255, 255, 255));
+        btnAlta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/add.png"))); // NOI18N
+        btnAlta.setText("Dar de alta");
+        btnAlta.setToolTipText("Alta a nuevo empleado");
+        btnAlta.setPreferredSize(new java.awt.Dimension(170, 30));
+        btnAlta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnAltaActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton1);
+        jPhIzquierdo.add(btnAlta);
 
-        jButton2.setBackground(new java.awt.Color(113, 161, 166));
-        jButton2.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/note_edit.png"))); // NOI18N
-        jButton2.setText("Actualizar");
-        jButton2.setToolTipText("Actualizar empleado");
-        jButton2.setPreferredSize(new java.awt.Dimension(170, 30));
-        jPanel5.add(jButton2);
+        btnActualiza.setBackground(new java.awt.Color(113, 161, 166));
+        btnActualiza.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        btnActualiza.setForeground(new java.awt.Color(255, 255, 255));
+        btnActualiza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/note_edit.png"))); // NOI18N
+        btnActualiza.setText("Actualizar");
+        btnActualiza.setToolTipText("Actualizar empleado");
+        btnActualiza.setPreferredSize(new java.awt.Dimension(170, 30));
+        btnActualiza.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnActualizaActionPerformed(evt);
+            }
+        });
+        jPhIzquierdo.add(btnActualiza);
 
-        jButton3.setBackground(new java.awt.Color(113, 161, 166));
-        jButton3.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/delete.png"))); // NOI18N
-        jButton3.setText("Eliminar");
-        jButton3.setToolTipText("Eliminar empleado");
-        jButton3.setPreferredSize(new java.awt.Dimension(170, 30));
-        jPanel5.add(jButton3);
+        btnElimina.setBackground(new java.awt.Color(113, 161, 166));
+        btnElimina.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        btnElimina.setForeground(new java.awt.Color(255, 255, 255));
+        btnElimina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/delete.png"))); // NOI18N
+        btnElimina.setText("Eliminar");
+        btnElimina.setToolTipText("Eliminar empleado");
+        btnElimina.setPreferredSize(new java.awt.Dimension(170, 30));
+        btnElimina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminaActionPerformed(evt);
+            }
+        });
+        jPhIzquierdo.add(btnElimina);
 
-        jPanel3.add(jPanel5);
+        jPizquierdo.add(jPhIzquierdo);
 
-        jPanel1.add(jPanel3, java.awt.BorderLayout.LINE_START);
+        jPprincipal.add(jPizquierdo, java.awt.BorderLayout.LINE_START);
 
-        jPanel6.setLayout(new javax.swing.BoxLayout(jPanel6, javax.swing.BoxLayout.Y_AXIS));
+        jPcentral.setLayout(new javax.swing.BoxLayout(jPcentral, javax.swing.BoxLayout.Y_AXIS));
 
-        jPanel7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
-        jPanel7.setPreferredSize(new java.awt.Dimension(1101, 70));
+        jPbuscador.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
+        jPbuscador.setPreferredSize(new java.awt.Dimension(1101, 70));
 
-        Sname.setText("Nombre");
-        jPanel7.add(Sname);
+        btnSname.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        btnSname.setText("Nombre");
+        jPbuscador.add(btnSname);
 
-        jLabel4.setText("|");
-        jPanel7.add(jLabel4);
+        jLseparador.setText("|");
+        jPbuscador.add(jLseparador);
 
-        Sid.setText("ID");
-        jPanel7.add(Sid);
+        btnSid.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        btnSid.setText("ID");
+        jPbuscador.add(btnSid);
 
+        FSearch.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
         FSearch.setPreferredSize(new java.awt.Dimension(500, 24));
         FSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 FSearchActionPerformed(evt);
             }
         });
-        jPanel7.add(FSearch);
+        FSearch.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                FSearchKeyTyped(evt);
+            }
+        });
+        jPbuscador.add(FSearch);
 
         btnSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/zoom.png"))); // NOI18N
-        jPanel7.add(btnSearch);
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
+        jPbuscador.add(btnSearch);
 
-        jPanel6.add(jPanel7);
+        jPcentral.add(jPbuscador);
 
-        jPanel8.setLayout(new javax.swing.BoxLayout(jPanel8, javax.swing.BoxLayout.LINE_AXIS));
+        jPtable.setLayout(new javax.swing.BoxLayout(jPtable, javax.swing.BoxLayout.LINE_AXIS));
 
-        jPanel9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.darkGray, java.awt.Color.darkGray));
-        jPanel9.setLayout(new javax.swing.OverlayLayout(jPanel9));
+        jPtable2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.darkGray, java.awt.Color.darkGray));
+        jPtable2.setLayout(new javax.swing.OverlayLayout(jPtable2));
 
-        jTable1.setBackground(new java.awt.Color(230, 230, 230));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tableEmpleados.setBackground(new java.awt.Color(230, 230, 230));
+        tableEmpleados.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        tableEmpleados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -198,79 +883,452 @@ public class GestionEmpleados extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tableEmpleados);
 
-        jPanel9.add(jScrollPane1);
+        jPtable2.add(jScrollPane1);
 
-        jPanel8.add(jPanel9);
+        jPtable.add(jPtable2);
 
-        jPanel10.setLayout(new javax.swing.OverlayLayout(jPanel10));
-        jPanel8.add(jPanel10);
+        jPcentral.add(jPtable);
 
-        jPanel6.add(jPanel8);
+        jPprincipal.add(jPcentral, java.awt.BorderLayout.CENTER);
 
-        jPanel1.add(jPanel6, java.awt.BorderLayout.CENTER);
-
-        getContentPane().add(jPanel1);
+        getContentPane().add(jPprincipal);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+    private void GoToInMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GoToInMouseClicked
         InicioFrame inicio = new InicioFrame();
         this.setVisible(false);
         inicio.setSize(this.getSize());
+        inicio.setLocation(this.getLocation());
         inicio.setVisible(true);
 
-    }//GEN-LAST:event_jLabel1MouseClicked
+    }//GEN-LAST:event_GoToInMouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        RegisterEmpleado rge=new RegisterEmpleado();
+    private void btnAltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAltaActionPerformed
+        RegisterEmpleado rge = new RegisterEmpleado();
         super.setVisible(false);
+        rge.setSize(this.getSize());
+        rge.setLocation(this.getLocation());
         rge.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnAltaActionPerformed
 
     private void FSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FSearchActionPerformed
-        // TODO add your handling code here:
+        btnSearch.doClick();
     }//GEN-LAST:event_FSearchActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-       int answ=JOptionPane.showConfirmDialog(this,"¿Estas seguro de salir?","!?",JOptionPane.YES_NO_OPTION);
-        if(answ==0){
+        int answ = JOptionPane.showConfirmDialog(this, "¿Estas seguro de salir?", "!?", JOptionPane.YES_NO_OPTION);
+        if (answ == 0) {
             System.exit(0);
         }
     }//GEN-LAST:event_formWindowClosing
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btnConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaActionPerformed
+        dtm.setRowCount(0);
+        tableEmpleados.setModel(dtm);
+
+        logica.consulta();
+    }//GEN-LAST:event_btnConsultaActionPerformed
+
+    private void btnActualizaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizaActionPerformed
+        if (tableEmpleados.getSelectedRow() != -1) {
+            String id = (String) tableEmpleados.getValueAt(tableEmpleados.getSelectedRow(), 0);
+            logica.llenaActualizarEmpleado(id);
+            jdActualizar.setAlwaysOnTop(true); // Siempre encima
+            jdActualizar.setLocationRelativeTo(this);
+            jdActualizar.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(null, "Debe seleccionar un empleado");
+        }
+    }//GEN-LAST:event_btnActualizaActionPerformed
+
+    private void btnRegistraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistraActionPerformed
+       String nombre=txtNombre.getText(),paterno=txtPaterno.getText(),materno=txtMaterno.getText(),ubicacion=txtUbi.getText(),
+               telefono=txtTelefono.getText(),mail=txtMail.getText(),status=String.valueOf(comboEstado.getSelectedItem()),fn=txtFN.getText(),
+               fi=txtFI.getText();
+        if(!nombre.isEmpty()&&!paterno.isEmpty()&&!materno.isEmpty()&&!ubicacion.isEmpty()&&!telefono.isEmpty()&&!mail.isEmpty()&&!status.isEmpty()&&!fn.isEmpty()&&!fi.isEmpty()){
+            logica.actualizarEmpleado(id.getText(),nombre, paterno, materno, ubicacion, telefono, mail, status, fn, fi);
+            clearTxtUpdate();
+        }else{
+            JOptionPane.showMessageDialog(jdActualizar, "Llene todos los campos");
+        }
+    }//GEN-LAST:event_btnRegistraActionPerformed
+
+    private void btnDescartaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDescartaActionPerformed
+        jdActualizar.setVisible(false);
+        clearTxtUpdate();
+    }//GEN-LAST:event_btnDescartaActionPerformed
+    private void clearTxtUpdate(){
+            txtNombre.setText("");
+            txtPaterno.setText("");
+            txtMaterno.setText("");
+            txtUbi.setText("");
+            txtTelefono.setText("");
+            txtMail.setText("");
+            txtNombre.setText("");
+            txtFI.setText("");
+            txtFN.setText("");
+    }
+    private void txtMailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_txtMailActionPerformed
+
+    private void txtFNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFNActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFNActionPerformed
+
+    private void btnEliminaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminaActionPerformed
+        if (tableEmpleados.getSelectedRow() != -1) {
+            String id = (String) tableEmpleados.getValueAt(tableEmpleados.getSelectedRow(), 0);
+            int yesno=JOptionPane.showConfirmDialog(null, "Estas seguro que deseas eliminar al empleado con ID "+id);
+            if(yesno==JOptionPane.YES_OPTION){
+                logica.eliminaE(id);
+                btnConsulta.doClick();
+ 
+            }else{
+                JOptionPane.showMessageDialog(null, "Debe seleccionar el usuario el cuál desea eliminar");
+            }
+        }
+    }//GEN-LAST:event_btnEliminaActionPerformed
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        String busca = FSearch.getText().toUpperCase();
+        FSearch.setText(busca.replaceAll("[^" + logica.sinEspeciales.replace("^", "").replace("+", "") + "]", ""));
+        busca = FSearch.getText();
+        if (btnSid.isSelected()) {
+            dtm.setRowCount(0);
+            logica.buscaEmpleadoId(busca);
+
+            if (tableEmpleados.getRowCount() == 0) {
+                JOptionPane.showMessageDialog(null, "No se encontrarón coincidencias");
+                btnConsulta.doClick();
+            }
+        } else if (btnSname.isSelected()) {
+            dtm.setRowCount(0);
+            logica.buscaEmpleadoName(busca);
+            if (tableEmpleados.getRowCount() == 0) {
+                JOptionPane.showMessageDialog(null, "No se encontrarón coincidencias");
+                btnConsulta.doClick();
+            }
+        }
+    }//GEN-LAST:event_btnSearchActionPerformed
+
+    private void rbtnPVMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rbtnPVMouseClicked
+//        IncioFrame.holder();
+    }//GEN-LAST:event_rbtnPVMouseClicked
+
+    private void rbtnContaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rbtnContaMouseClicked
+//        holder();
+    }//GEN-LAST:event_rbtnContaMouseClicked
+
+    private void rbtnAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rbtnAdminMouseClicked
+//        holder();
+    }//GEN-LAST:event_rbtnAdminMouseClicked
+
+    private void rbtnRhMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rbtnRhMouseClicked
+//        holder();
+    }//GEN-LAST:event_rbtnRhMouseClicked
+
+    private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
+        String ID = txtId.getText();
+        String nameUsu = txtNameUsu.getText();
+        String contra = passw.getText();
+        String confirm = String.valueOf(CPass.getPassword());
+        JOptionPane.showMessageDialog(newCount, contra + " " + confirm);
+        if (!ID.isEmpty() && !nameUsu.isEmpty() && !contra.isEmpty() && !confirm.isEmpty()) {
+            if (contra.equals(confirm)) {
+                if (rbtnPV.isSelected()) {
+                    //registro en la tabla
+                    String register = Conexion.getPassword();
+                    //registro en la tabla cuentas
+                    confirmPass = CPass.getPassword().toString() + "_pv";
+                    Controlador.logica.newCuenta("p",ID,txtNameUsu.getText(), confirmPass);
+                } else if (rbtnRh.isSelected()) {
+                    confirmPass = CPass.getPassword().toString() + "_rh";
+                    Controlador.logica.newCuenta("r",ID,txtNameUsu.getText(), confirmPass);
+                } else if (rbtnConta.isSelected()) {
+                    confirmPass = CPass.getPassword().toString() + "_ct";
+                    Controlador.logica.newCuenta("c",ID,txtNameUsu.getText(), confirmPass);
+                } else if (rbtnAdmin.isSelected()) {
+                    confirmPass = CPass.getPassword().toString() + "_adm";
+                    Controlador.logica.newCuenta("a",ID,txtNameUsu.getText(), confirmPass);
+                }
+            } else {
+                JOptionPane.showMessageDialog(newCount, "Las contraseñas deben coincidir");
+                passw.setText("");
+            }
+        }
+
+        //        addNewUser.setAlwaysOnTop(true);
+    }//GEN-LAST:event_btnCreateActionPerformed
+    private void clearNewAcc(){
+        txtId.setText("");
+        txtNameUsu.setText("");
+        passw.setText("");
+        CPass.setText("");
+    }
+    private void CPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CPassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CPassActionPerformed
+
+    private void txtBuscaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtBuscaFocusGained
+//        txtBusca.setForeground(Color.black);
+    }//GEN-LAST:event_txtBuscaFocusGained
+
+    private void txtBuscaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtBuscaFocusLost
+//        if(!idCuenta.isBlank()){
+//            holder();
+//        }
+    }//GEN-LAST:event_txtBuscaFocusLost
+
+    private void txtBuscaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtBuscaMouseClicked
+        txtBusca.setText("");
+    }//GEN-LAST:event_txtBuscaMouseClicked
+
+    private void txtBuscaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBuscaActionPerformed
+
+    }//GEN-LAST:event_txtBuscaActionPerformed
+
+    private void txtBuscaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBuscaKeyTyped
+        String txt=txtBusca.getText().toUpperCase();
+        if (!txt.matches(logica.serie)) {
+                // Filtrar solo los caracteres válidos
+                txtBusca.setText(txt.replaceAll("[^" + logica.sinEspeciales.replace("^", "").replace("+", "") + "]", ""));
+            }else{
+                txtBusca.setText(txt.replaceAll("[^" + logica.sinEspeciales.replace("^", "").replace("+", "") + "]", ""));
+            }
+    }//GEN-LAST:event_txtBuscaKeyTyped
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String txt=txtBusca.getText().toUpperCase();
+        if (!txt.matches(logica.serie)) {
+                // Filtrar solo los caracteres válidos
+                txtBusca.setText(txt.replaceAll("[^" + logica.sinEspeciales.replace("^", "").replace("+", "") + "]", ""));
+            }else{
+                txtBusca.setText(txt.replaceAll("[^" + logica.sinEspeciales.replace("^", "").replace("+", "") + "]", ""));
+            }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void userMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userMouseClicked
+        config.setAlwaysOnTop(true); // Siempre encima
+        config.setSize(442, 218);
+        config.setLocationRelativeTo(null); // Centrar el diálogo
+        config.setVisible(true);
+    }//GEN-LAST:event_userMouseClicked
+
+    private void userMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userMouseEntered
+
+    }//GEN-LAST:event_userMouseEntered
+
+    private void userMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userMouseExited
+
+    }//GEN-LAST:event_userMouseExited
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Principal p =new Principal();
+        p.edit.doClick();
+        p.setSize(1,1);
+        config.setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        Login log = new Login();
+        log.setVisible(true);
+        config.setVisible(false);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void txtNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyTyped
+        String texto = txtNombre.getText();
+        if (!texto.matches(logica.nombress)) {
+            // Filtrar solo los caracteres válidos
+            txtNombre.setText(texto.replaceAll("[^" + logica.nombress.replace("^", "").replace("+", "") + "]", ""));
+        }
+    }//GEN-LAST:event_txtNombreKeyTyped
+
+    private void txtPaternoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPaternoKeyTyped
+        String texto = txtPaterno.getText();
+        if (!texto.matches(logica.nombress)) {
+            // Filtrar solo los caracteres válidos
+            txtPaterno.setText(texto.replaceAll("[^" + logica.nombress.replace("^", "").replace("+", "") + "]", ""));
+        }
+    }//GEN-LAST:event_txtPaternoKeyTyped
+
+    private void txtMaternoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMaternoKeyTyped
+        String texto = txtMaterno.getText();
+        if (!texto.matches(logica.nombress)) {
+            // Filtrar solo los caracteres válidos
+            txtMaterno.setText(texto.replaceAll("[^" + logica.nombress.replace("^", "").replace("+", "") + "]", ""));
+        }
+    }//GEN-LAST:event_txtMaternoKeyTyped
+
+    private void txtUbiKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUbiKeyTyped
+        String texto = txtUbi.getText();
+        if (!texto.matches(logica.sinEspeciales)) {
+            // Filtrar solo los caracteres válidos
+            txtUbi.setText(texto.replaceAll("[^" + logica.sinEspeciales.replace("^", "").replace("+", "") + "]", ""));
+        }
+    }//GEN-LAST:event_txtUbiKeyTyped
+
+    private void txtTelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelefonoKeyTyped
+         char c = evt.getKeyChar();
+
+        // Solo permitir números y controlar la longitud
+        if (!Character.isDigit(c) || txtTelefono.getText().length() >= 10) {
+            evt.consume(); // Bloquea la entrada inválida
+            return;
+        }
+        
+        String texto = txtTelefono.getText();
+        if (!texto.matches(logica.telefonos)) {
+            // Filtrar solo los caracteres válidos
+            txtTelefono.setText(texto.replaceAll("[^" + logica.telefonos.replace("^", "").replace("+", "") + "]", ""));
+        }
+    }//GEN-LAST:event_txtTelefonoKeyTyped
+
+    private void txtMailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMailKeyTyped
+       String texto = txtMail.getText();
+        if (!texto.matches(logica.correos)) {
+            // Filtrar solo los caracteres válidos
+            txtMail.setText(texto.replaceAll("[^" + logica.correos.replace("^", "").replace("+", "") + "]", ""));
+        }
+    }//GEN-LAST:event_txtMailKeyTyped
+
+    private void txtFNKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtFNKeyTyped
+       char c = evt.getKeyChar();
+                
+                // Solo permitir números y controlar la longitud
+                if (!Character.isDigit(c) || txtFN.getText().length() >= 10) {
+                    evt.consume(); // Bloquea la entrada inválida
+                    return;
+                }
+                String texto = txtFN.getText();
+                
+                // Agregar '/' automáticamente en la posición correcta
+                if ((texto.length() == 4 || texto.length() == 7) && c != '-') {
+                    txtFN.setText(texto + "-");
+                }
+    }//GEN-LAST:event_txtFNKeyTyped
+
+    private void txtFIKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtFIKeyTyped
+       char c = evt.getKeyChar();
+                
+                // Solo permitir números y controlar la longitud
+                if (!Character.isDigit(c) || txtFI.getText().length() >= 10) {
+                    evt.consume(); // Bloquea la entrada inválida
+                    return;
+                }
+                String texto = txtFI.getText();
+                
+                // Agregar '/' automáticamente en la posición correcta
+                if ((texto.length() == 4 || texto.length() == 7) && c != '-') {
+                    txtFI.setText(texto + "-");
+                }
+    }//GEN-LAST:event_txtFIKeyTyped
+
+    private void txtFIMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtFIMouseClicked
+        txtFI.setText("");
+    }//GEN-LAST:event_txtFIMouseClicked
+
+    private void txtFNMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtFNMouseClicked
+        txtFN.setText("");
+    }//GEN-LAST:event_txtFNMouseClicked
+
+    private void FSearchKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_FSearchKeyTyped
+         String txt=FSearch.getText().toUpperCase();
+        if(btnSid.isSelected()){
+            if (!txt.matches(logica.serie)) {
+                // Filtrar solo los caracteres válidos
+                FSearch.setText(txt.replaceAll("[^" + logica.sinEspeciales.replace("^", "").replace("+", "") + "]", ""));
+            }else{
+                FSearch.setText(txt.replaceAll("[^" + logica.sinEspeciales.replace("^", "").replace("+", "") + "]", ""));
+            }
+        }
+        if (!txt.matches(logica.serie)) {
+            // Filtrar solo los caracteres válidos
+            FSearch.setText(txt.replaceAll("[^" + logica.sinEspeciales.replace("^", "").replace("+", "") + "]", ""));
+        }
+        
+    }//GEN-LAST:event_FSearchKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPasswordField CPass;
     private javax.swing.JTextField FSearch;
+    public static javax.swing.JLabel GoToIn;
     private javax.swing.ButtonGroup Grupo3;
-    private javax.swing.JToggleButton Sid;
-    private javax.swing.JToggleButton Sname;
+    private javax.swing.JButton btnActualiza;
+    private javax.swing.JButton btnAlta;
+    public static javax.swing.JButton btnConsulta;
+    private javax.swing.JButton btnCreate;
+    private javax.swing.JButton btnDescarta;
+    private javax.swing.JButton btnElimina;
+    private javax.swing.JButton btnRegistra;
     private javax.swing.JButton btnSearch;
+    private javax.swing.JToggleButton btnSid;
+    private javax.swing.JToggleButton btnSname;
+    public static javax.swing.JComboBox<String> comboEstado;
+    private javax.swing.JDialog config;
+    private javax.swing.ButtonGroup group;
+    public static javax.swing.JLabel id;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLseparador;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
+    private javax.swing.JPanel jPbuscador;
+    private javax.swing.JPanel jPcentral;
+    private javax.swing.JPanel jPhIzquierdo;
+    private javax.swing.JPanel jPizquierdo;
+    private javax.swing.JPanel jPprincipal;
+    private javax.swing.JPanel jPsuper;
+    private javax.swing.JPanel jPsuperDialog;
+    private javax.swing.JPanel jPtable;
+    private javax.swing.JPanel jPtable2;
+    private javax.swing.JPanel jPtitulo;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    public static javax.swing.JDialog jdActualizar;
+    private javax.swing.JLabel labelId;
+    private javax.swing.JLabel labelNameUsuario;
+    private javax.swing.JLabel labelPass;
+    private javax.swing.JLabel labelTitulo;
+    private javax.swing.JDialog newCount;
+    private javax.swing.JTextField passw;
+    private javax.swing.JRadioButton rbtnAdmin;
+    private javax.swing.JRadioButton rbtnConta;
+    private javax.swing.JRadioButton rbtnPV;
+    private javax.swing.JRadioButton rbtnRh;
+    public static javax.swing.JTable tableEmpleados;
+    public static javax.swing.JTextField txtBusca;
+    public static javax.swing.JTextField txtFI;
+    public static javax.swing.JTextField txtFN;
+    public static javax.swing.JTextField txtId;
+    public static javax.swing.JTextField txtMail;
+    public static javax.swing.JTextField txtMaterno;
+    private javax.swing.JTextField txtNameUsu;
+    public static javax.swing.JTextField txtNombre;
+    public static javax.swing.JTextField txtPaterno;
+    public static javax.swing.JTextField txtTelefono;
+    public static javax.swing.JTextField txtUbi;
+    public static javax.swing.JLabel user;
+    private javax.swing.JLabel vacio;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,24 +1,26 @@
-
 package Vista;
 
+import Controlador.logica;
+import Modelo.Conexion;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author chay
- */
 public class Conta extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Conta
-     */
+    public static final String compra = "compras";
+    public static final String gasto = "gastos";
+    public static final String deuda = "deudas";
+
+    //'ventas', 'gastos', 'compras', 'deudas', 'salarios');
     public Conta() {
         initComponents();
         this.setLocationRelativeTo(null);
-        jPanel13.setVisible(false);
-        jPanel12.setVisible(false);
-        jPanel11.setVisible(false);
-        
+        jPform1.setVisible(false);
+        jPform3.setVisible(false);
+        jPform2.setVisible(false);
+        jList2 = Controlador.logica.consultaGastos(jList2);
+        deudasList = Controlador.logica.consultaDeudas(deudasList);
+        user.setText(Controlador.logica.userNow);
+
     }
 
     /**
@@ -29,74 +31,69 @@ public class Conta extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
+        config = new javax.swing.JDialog();
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel7 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
+        PanelPrincipal = new javax.swing.JPanel();
+        jPizquierdo = new javax.swing.JPanel();
+        botones = new javax.swing.JPanel();
+        btnRC = new javax.swing.JButton();
+        btnRG = new javax.swing.JButton();
+        btnRD = new javax.swing.JButton();
+        btnED = new javax.swing.JButton();
+        btnRD1 = new javax.swing.JButton();
+        jPsuper = new javax.swing.JPanel();
+        labelTresP1 = new javax.swing.JLabel();
+        GoToIn = new javax.swing.JLabel();
+        vacio = new javax.swing.JLabel();
+        vacio2 = new javax.swing.JLabel();
+        jPnombre = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        jPanel13 = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jLabel12 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        jSpinner5 = new javax.swing.JSpinner();
-        jLabel5 = new javax.swing.JLabel();
-        jTextField19 = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel7 = new javax.swing.JLabel();
-        jTextField20 = new javax.swing.JTextField();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jPanel11 = new javax.swing.JPanel();
+        user = new javax.swing.JLabel();
+        jPcentral = new javax.swing.JPanel();
+        jPform1 = new javax.swing.JPanel();
+        jL1descripcion = new javax.swing.JLabel();
+        descripcion1 = new javax.swing.JTextField();
+        jL1fecha = new javax.swing.JLabel();
+        fecha1 = new javax.swing.JTextField();
+        jL1TP = new javax.swing.JLabel();
+        total1 = new javax.swing.JSpinner();
+        jL1MP = new javax.swing.JLabel();
+        metodo1 = new javax.swing.JComboBox<>();
+        btn1Cancelar = new javax.swing.JButton();
+        btn1registra = new javax.swing.JButton();
+        jPform2 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        fecha2 = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
-        jSpinner4 = new javax.swing.JSpinner();
+        total2 = new javax.swing.JSpinner();
         jLabel22 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        metodo2 = new javax.swing.JComboBox<>();
         jLabel21 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
+        descripcion2 = new javax.swing.JTextField();
         jButton12 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
-        jPanel12 = new javax.swing.JPanel();
+        jPform3 = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
-        jSpinner1 = new javax.swing.JSpinner();
+        meses = new javax.swing.JSpinner();
         jLabel16 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        metodo3 = new javax.swing.JComboBox<>();
         jLabel17 = new javax.swing.JLabel();
-        jSpinner2 = new javax.swing.JSpinner();
+        interes3 = new javax.swing.JSpinner();
         jLabel11 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
+        acreedor3 = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        motivo3 = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        jSpinner3 = new javax.swing.JSpinner();
+        monto3 = new javax.swing.JSpinner();
         jLabel14 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jLabel29 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
+        fecha3 = new javax.swing.JTextField();
         jButton11 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jPanel14 = new javax.swing.JPanel();
+        jPdetalles = new javax.swing.JPanel();
         jPanel15 = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -104,9 +101,66 @@ public class Conta extends javax.swing.JFrame {
         jPanel16 = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        deudasList = new javax.swing.JList<>();
+
+        config.getContentPane().setLayout(new javax.swing.OverlayLayout(config.getContentPane()));
+
+        jPanel1.setBackground(new java.awt.Color(140, 162, 192));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 5));
+
+        jButton1.setFont(new java.awt.Font("Linux Libertine Mono O", 1, 14)); // NOI18N
+        jButton1.setText("Editar perfil");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(140, 162, 192), 5));
+        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton1.setMinimumSize(new java.awt.Dimension(126, 20));
+        jButton1.setPreferredSize(new java.awt.Dimension(126, 25));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setFont(new java.awt.Font("Linux Libertine Mono O", 1, 14)); // NOI18N
+        jButton3.setText("Cerrar sesión");
+        jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(140, 162, 192), 5));
+        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton3.setMinimumSize(new java.awt.Dimension(126, 20));
+        jButton3.setPreferredSize(new java.awt.Dimension(126, 25));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 399, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 10, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(0, 9, Short.MAX_VALUE)))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 172, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 16, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, 0)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 16, Short.MAX_VALUE)))
+        );
+
+        config.getContentPane().add(jPanel1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setTitle("Contábilidad");
         setMinimumSize(new java.awt.Dimension(198, 388));
         setSize(new java.awt.Dimension(950, 650));
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -116,243 +170,344 @@ public class Conta extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new javax.swing.OverlayLayout(getContentPane()));
 
-        jPanel1.setLayout(new java.awt.BorderLayout());
+        PanelPrincipal.setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setBackground(new java.awt.Color(140, 162, 192));
-        jPanel2.setPreferredSize(new java.awt.Dimension(220, 220));
+        jPizquierdo.setBackground(new java.awt.Color(140, 162, 192));
+        jPizquierdo.setPreferredSize(new java.awt.Dimension(220, 220));
 
-        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel7.setPreferredSize(new java.awt.Dimension(200, 190));
-        jPanel7.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 9));
+        botones.setBackground(new java.awt.Color(255, 255, 255));
+        botones.setPreferredSize(new java.awt.Dimension(200, 150));
+        botones.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 9));
 
-        jButton1.setBackground(new java.awt.Color(113, 161, 166));
-        jButton1.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Registrar compra");
-        jButton1.setPreferredSize(new java.awt.Dimension(180, 20));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnRC.setBackground(new java.awt.Color(113, 161, 166));
+        btnRC.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 12)); // NOI18N
+        btnRC.setForeground(new java.awt.Color(255, 255, 255));
+        btnRC.setText("Registrar compra");
+        btnRC.setPreferredSize(new java.awt.Dimension(180, 20));
+        btnRC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnRCActionPerformed(evt);
             }
         });
-        jPanel7.add(jButton1);
+        botones.add(btnRC);
 
-        jButton3.setBackground(new java.awt.Color(113, 161, 166));
-        jButton3.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Registro de gastos");
-        jButton3.setPreferredSize(new java.awt.Dimension(180, 20));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnRG.setBackground(new java.awt.Color(113, 161, 166));
+        btnRG.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 12)); // NOI18N
+        btnRG.setForeground(new java.awt.Color(255, 255, 255));
+        btnRG.setText("Registro de gastos");
+        btnRG.setPreferredSize(new java.awt.Dimension(180, 20));
+        btnRG.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnRGActionPerformed(evt);
             }
         });
-        jPanel7.add(jButton3);
+        botones.add(btnRG);
 
-        jButton4.setBackground(new java.awt.Color(113, 161, 166));
-        jButton4.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Registrar deuda");
-        jButton4.setPreferredSize(new java.awt.Dimension(180, 20));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnRD.setBackground(new java.awt.Color(113, 161, 166));
+        btnRD.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 12)); // NOI18N
+        btnRD.setForeground(new java.awt.Color(255, 255, 255));
+        btnRD.setText("Registrar deuda");
+        btnRD.setPreferredSize(new java.awt.Dimension(180, 20));
+        btnRD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnRDActionPerformed(evt);
             }
         });
-        jPanel7.add(jButton4);
+        botones.add(btnRD);
 
-        jButton5.setBackground(new java.awt.Color(113, 161, 166));
-        jButton5.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Ver deudas");
-        jButton5.setPreferredSize(new java.awt.Dimension(180, 20));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btnED.setBackground(new java.awt.Color(113, 161, 166));
+        btnED.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 12)); // NOI18N
+        btnED.setForeground(new java.awt.Color(255, 255, 255));
+        btnED.setText("Eliminar deuda");
+        btnED.setPreferredSize(new java.awt.Dimension(180, 20));
+        btnED.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btnEDActionPerformed(evt);
             }
         });
-        jPanel7.add(jButton5);
+        botones.add(btnED);
 
-        jButton6.setBackground(new java.awt.Color(113, 161, 166));
-        jButton6.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("Editar deuda");
-        jButton6.setPreferredSize(new java.awt.Dimension(180, 20));
-        jPanel7.add(jButton6);
+        btnRD1.setBackground(new java.awt.Color(113, 161, 166));
+        btnRD1.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 12)); // NOI18N
+        btnRD1.setForeground(new java.awt.Color(255, 255, 255));
+        btnRD1.setText("Ver inventario");
+        btnRD1.setPreferredSize(new java.awt.Dimension(180, 20));
+        btnRD1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRD1ActionPerformed(evt);
+            }
+        });
+        botones.add(btnRD1);
 
-        jButton7.setBackground(new java.awt.Color(113, 161, 166));
-        jButton7.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("Agregar proveedor");
-        jButton7.setPreferredSize(new java.awt.Dimension(180, 20));
-        jPanel7.add(jButton7);
+        jPizquierdo.add(botones);
 
-        jPanel2.add(jPanel7);
+        PanelPrincipal.add(jPizquierdo, java.awt.BorderLayout.LINE_START);
 
-        jPanel1.add(jPanel2, java.awt.BorderLayout.LINE_START);
+        jPsuper.setBackground(new java.awt.Color(140, 162, 192));
+        jPsuper.setMinimumSize(new java.awt.Dimension(100, 50));
+        jPsuper.setPreferredSize(new java.awt.Dimension(1000, 50));
 
-        jPanel3.setBackground(new java.awt.Color(140, 162, 192));
-        jPanel3.setMinimumSize(new java.awt.Dimension(100, 50));
-        jPanel3.setPreferredSize(new java.awt.Dimension(1000, 50));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/Hous.png"))); // NOI18N
-        jLabel2.setText("   ");
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+        labelTresP1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/TresPWhiteN.png"))); // NOI18N
+        labelTresP1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
+                labelTresP1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                labelTresP1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                labelTresP1MouseExited(evt);
             }
         });
-        jPanel3.add(jLabel2);
+        jPsuper.add(labelTresP1);
 
-        jLabel4.setText("              ");
-        jPanel3.add(jLabel4);
+        GoToIn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/Hous.png"))); // NOI18N
+        GoToIn.setText("   ");
+        GoToIn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                GoToInMouseClicked(evt);
+            }
+        });
+        jPsuper.add(GoToIn);
 
-        jLabel1.setText("      ");
-        jPanel3.add(jLabel1);
+        vacio.setText("              ");
+        jPsuper.add(vacio);
 
-        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.gray, java.awt.Color.gray, java.awt.Color.gray, java.awt.Color.gray));
-        jPanel6.setPreferredSize(new java.awt.Dimension(600, 50));
-        jPanel6.setLayout(new java.awt.GridBagLayout());
+        vacio2.setText("      ");
+        jPsuper.add(vacio2);
 
-        jLabel3.setFont(new java.awt.Font("Ubuntu Sans Mono", 1, 18)); // NOI18N
-        jLabel3.setText("Contabilidad");
-        jPanel6.add(jLabel3, new java.awt.GridBagConstraints());
+        jPnombre.setBackground(new java.awt.Color(255, 255, 255));
+        jPnombre.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.gray, java.awt.Color.gray, java.awt.Color.gray, java.awt.Color.gray));
+        jPnombre.setPreferredSize(new java.awt.Dimension(300, 50));
+        jPnombre.setLayout(new java.awt.GridBagLayout());
 
-        jPanel3.add(jPanel6);
+        jLabel3.setFont(new java.awt.Font("Nimbus Mono PS", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(20, 20, 20));
+        jLabel3.setText("Contábilidad");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 17);
+        jPnombre.add(jLabel3, gridBagConstraints);
 
-        jPanel1.add(jPanel3, java.awt.BorderLayout.PAGE_START);
+        user.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/usuarioGrande.png"))); // NOI18N
+        user.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                userMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                userMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                userMouseExited(evt);
+            }
+        });
+        jPnombre.add(user, new java.awt.GridBagConstraints());
 
-        jPanel4.setBackground(new java.awt.Color(140, 162, 192));
+        jPsuper.add(jPnombre);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
-        );
+        PanelPrincipal.add(jPsuper, java.awt.BorderLayout.PAGE_START);
 
-        jPanel1.add(jPanel4, java.awt.BorderLayout.LINE_END);
+        jPcentral.setBackground(new java.awt.Color(113, 161, 166));
+        jPcentral.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 5));
+        jPcentral.setLayout(new javax.swing.BoxLayout(jPcentral, javax.swing.BoxLayout.PAGE_AXIS));
 
-        jPanel5.setBackground(new java.awt.Color(113, 161, 166));
-        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 5));
-        jPanel5.setLayout(new javax.swing.BoxLayout(jPanel5, javax.swing.BoxLayout.Y_AXIS));
+        jPform1.setBackground(new java.awt.Color(140, 162, 192));
+        jPform1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.darkGray));
+        jPform1.setPreferredSize(new java.awt.Dimension(50, 50));
+        jPform1.setLayout(new java.awt.GridLayout(5, 2));
 
-        jPanel13.setBackground(new java.awt.Color(140, 162, 192));
-        jPanel13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.darkGray));
-        jPanel13.setPreferredSize(new java.awt.Dimension(50, 50));
-        jPanel13.setLayout(new java.awt.GridLayout(8, 2));
+        jL1descripcion.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        jL1descripcion.setText("    Descripción");
+        jL1descripcion.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
+        jL1descripcion.setPreferredSize(new java.awt.Dimension(50, 20));
+        jPform1.add(jL1descripcion);
 
-        jLabel9.setText("    Descripción");
-        jLabel9.setPreferredSize(new java.awt.Dimension(50, 20));
-        jPanel13.add(jLabel9);
-
-        jTextField6.setPreferredSize(new java.awt.Dimension(80, 24));
-        jPanel13.add(jTextField6);
-
-        jLabel6.setText("    Categoria");
-        jLabel6.setPreferredSize(new java.awt.Dimension(50, 20));
-        jPanel13.add(jLabel6);
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel13.add(jComboBox2);
-
-        jLabel12.setText("    Fecha");
-        jLabel12.setPreferredSize(new java.awt.Dimension(50, 20));
-        jPanel13.add(jLabel12);
-
-        jTextField4.setPreferredSize(new java.awt.Dimension(80, 24));
-        jPanel13.add(jTextField4);
-
-        jLabel8.setText("    Total a pagar");
-        jLabel8.setPreferredSize(new java.awt.Dimension(50, 20));
-        jPanel13.add(jLabel8);
-        jPanel13.add(jSpinner5);
-
-        jLabel5.setText("    id quien registra");
-        jLabel5.setPreferredSize(new java.awt.Dimension(50, 20));
-        jPanel13.add(jLabel5);
-
-        jTextField19.setPreferredSize(new java.awt.Dimension(80, 24));
-        jPanel13.add(jTextField19);
-
-        jLabel13.setText("    Método de pago");
-        jLabel13.setPreferredSize(new java.awt.Dimension(50, 20));
-        jPanel13.add(jLabel13);
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel13.add(jComboBox1);
-
-        jLabel7.setText("    Proveedor");
-        jLabel7.setPreferredSize(new java.awt.Dimension(50, 20));
-        jPanel13.add(jLabel7);
-
-        jTextField20.setPreferredSize(new java.awt.Dimension(80, 24));
-        jPanel13.add(jTextField20);
-
-        jButton9.setBackground(new java.awt.Color(250, 80, 80));
-        jButton9.setForeground(new java.awt.Color(255, 255, 255));
-        jButton9.setText("Cancelar");
-        jButton9.setPreferredSize(new java.awt.Dimension(50, 20));
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        descripcion1.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        descripcion1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
+        descripcion1.setPreferredSize(new java.awt.Dimension(80, 24));
+        descripcion1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                descripcion1ActionPerformed(evt);
             }
         });
-        jPanel13.add(jButton9);
+        descripcion1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                descripcion1KeyTyped(evt);
+            }
+        });
+        jPform1.add(descripcion1);
 
-        jButton10.setBackground(new java.awt.Color(100, 250, 100));
-        jButton10.setForeground(new java.awt.Color(102, 102, 102));
-        jButton10.setText("Registrar");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        jL1fecha.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        jL1fecha.setText("    Fecha");
+        jL1fecha.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
+        jL1fecha.setPreferredSize(new java.awt.Dimension(50, 20));
+        jPform1.add(jL1fecha);
+
+        fecha1.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        fecha1.setForeground(new java.awt.Color(190, 190, 190));
+        fecha1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        fecha1.setText("YYYY-MM-DD");
+        fecha1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
+        fecha1.setPreferredSize(new java.awt.Dimension(80, 24));
+        fecha1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fecha1MouseClicked(evt);
+            }
+        });
+        fecha1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                fecha1ActionPerformed(evt);
             }
         });
-        jPanel13.add(jButton10);
+        fecha1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                fecha1KeyTyped(evt);
+            }
+        });
+        jPform1.add(fecha1);
 
-        jPanel13.setSize(50,50);
+        jL1TP.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        jL1TP.setText("    Total a pagar");
+        jL1TP.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
+        jL1TP.setPreferredSize(new java.awt.Dimension(50, 20));
+        jPform1.add(jL1TP);
 
-        jPanel5.add(jPanel13);
+        total1.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        total1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
+        total1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                total1KeyTyped(evt);
+            }
+        });
+        jPform1.add(total1);
 
-        jPanel11.setBackground(new java.awt.Color(140, 162, 192));
-        jPanel11.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.darkGray));
-        jPanel11.setPreferredSize(new java.awt.Dimension(50, 50));
-        jPanel11.setLayout(new java.awt.GridLayout(6, 2));
+        jL1MP.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        jL1MP.setText("    Método de pago");
+        jL1MP.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+        jL1MP.setPreferredSize(new java.awt.Dimension(50, 20));
+        jPform1.add(jL1MP);
 
+        metodo1.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        metodo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Efectivo", "Credito", "Transferencia" }));
+        metodo1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+        metodo1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                metodo1KeyTyped(evt);
+            }
+        });
+        jPform1.add(metodo1);
+
+        btn1Cancelar.setBackground(new java.awt.Color(250, 80, 80));
+        btn1Cancelar.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        btn1Cancelar.setForeground(new java.awt.Color(255, 255, 255));
+        btn1Cancelar.setText("Cancelar");
+        btn1Cancelar.setPreferredSize(new java.awt.Dimension(50, 20));
+        btn1Cancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn1CancelarActionPerformed(evt);
+            }
+        });
+        jPform1.add(btn1Cancelar);
+
+        btn1registra.setBackground(new java.awt.Color(100, 250, 100));
+        btn1registra.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        btn1registra.setForeground(new java.awt.Color(102, 102, 102));
+        btn1registra.setText("Registrar");
+        btn1registra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn1registraActionPerformed(evt);
+            }
+        });
+        jPform1.add(btn1registra);
+
+        jPform1.setSize(50,50);
+
+        jPcentral.add(jPform1);
+
+        jPform2.setBackground(new java.awt.Color(140, 162, 192));
+        jPform2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.darkGray));
+        jPform2.setPreferredSize(new java.awt.Dimension(50, 50));
+        jPform2.setLayout(new java.awt.GridLayout(5, 2));
+
+        jLabel20.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
         jLabel20.setText("    Fecha");
-        jPanel11.add(jLabel20);
+        jLabel20.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
+        jPform2.add(jLabel20);
 
-        jTextField5.setPreferredSize(new java.awt.Dimension(80, 24));
-        jPanel11.add(jTextField5);
+        fecha2.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        fecha2.setForeground(new java.awt.Color(190, 190, 190));
+        fecha2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        fecha2.setText("YYYY-MM-DD");
+        fecha2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
+        fecha2.setPreferredSize(new java.awt.Dimension(80, 24));
+        fecha2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fecha2MouseClicked(evt);
+            }
+        });
+        fecha2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fecha2ActionPerformed(evt);
+            }
+        });
+        fecha2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                fecha2KeyTyped(evt);
+            }
+        });
+        jPform2.add(fecha2);
 
+        jLabel23.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
         jLabel23.setText("    Total a pagar");
-        jPanel11.add(jLabel23);
-        jPanel11.add(jSpinner4);
+        jLabel23.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
+        jPform2.add(jLabel23);
 
+        total2.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        total2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
+        total2.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                total2AncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        total2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                total2KeyTyped(evt);
+            }
+        });
+        jPform2.add(total2);
+
+        jLabel22.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
         jLabel22.setText("    Método de pago");
-        jPanel11.add(jLabel22);
+        jLabel22.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
+        jPform2.add(jLabel22);
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A crédito", "Al contado", "Con cheque" }));
-        jPanel11.add(jComboBox4);
+        metodo2.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        metodo2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Efectivo", "Credito", "Transferencia" }));
+        metodo2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
+        jPform2.add(metodo2);
 
+        jLabel21.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
         jLabel21.setText("    Descripcion");
-        jPanel11.add(jLabel21);
+        jLabel21.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+        jPform2.add(jLabel21);
 
-        jTextField11.setPreferredSize(new java.awt.Dimension(120, 24));
-        jPanel11.add(jTextField11);
-
-        jLabel10.setText("    id quien registra");
-        jPanel11.add(jLabel10);
-
-        jTextField9.setPreferredSize(new java.awt.Dimension(120, 24));
-        jPanel11.add(jTextField9);
+        descripcion2.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        descripcion2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+        descripcion2.setPreferredSize(new java.awt.Dimension(120, 24));
+        descripcion2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                descripcion2KeyTyped(evt);
+            }
+        });
+        jPform2.add(descripcion2);
 
         jButton12.setBackground(new java.awt.Color(250, 80, 80));
+        jButton12.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
         jButton12.setForeground(new java.awt.Color(255, 255, 255));
         jButton12.setText("Cancelar");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -360,9 +515,10 @@ public class Conta extends javax.swing.JFrame {
                 jButton12ActionPerformed(evt);
             }
         });
-        jPanel11.add(jButton12);
+        jPform2.add(jButton12);
 
         jButton13.setBackground(new java.awt.Color(100, 250, 100));
+        jButton13.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
         jButton13.setForeground(new java.awt.Color(102, 102, 102));
         jButton13.setText("Registrar");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
@@ -370,294 +526,648 @@ public class Conta extends javax.swing.JFrame {
                 jButton13ActionPerformed(evt);
             }
         });
-        jPanel11.add(jButton13);
+        jPform2.add(jButton13);
 
-        jPanel5.add(jPanel11);
+        jPcentral.add(jPform2);
 
-        jPanel12.setBackground(new java.awt.Color(140, 162, 192));
-        jPanel12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.darkGray));
-        jPanel12.setPreferredSize(new java.awt.Dimension(50, 50));
-        jPanel12.setLayout(new java.awt.GridLayout(9, 2));
+        jPform3.setBackground(new java.awt.Color(140, 162, 192));
+        jPform3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.darkGray));
+        jPform3.setPreferredSize(new java.awt.Dimension(50, 50));
+        jPform3.setLayout(new java.awt.GridLayout(8, 2));
 
+        jLabel19.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
         jLabel19.setText("    Plazo(Meses)");
-        jLabel19.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 153, 255)));
+        jLabel19.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
         jLabel19.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel12.add(jLabel19);
+        jPform3.add(jLabel19);
 
-        jSpinner1.setPreferredSize(new java.awt.Dimension(74, 24));
-        jPanel12.add(jSpinner1);
+        meses.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        meses.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
+        meses.setPreferredSize(new java.awt.Dimension(74, 24));
+        meses.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                mesesKeyTyped(evt);
+            }
+        });
+        jPform3.add(meses);
 
+        jLabel16.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
         jLabel16.setText("    Método");
-        jLabel16.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 153, 255)));
+        jLabel16.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
         jLabel16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel12.add(jLabel16);
+        jPform3.add(jLabel16);
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Crédito", "Contado" }));
-        jPanel12.add(jComboBox3);
+        metodo3.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        metodo3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Efectivo", "Credito", "Transferencia" }));
+        metodo3.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
+        jPform3.add(metodo3);
 
+        jLabel17.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
         jLabel17.setText("    Porcentaje de interes");
-        jLabel17.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 153, 255)));
+        jLabel17.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
         jLabel17.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel12.add(jLabel17);
+        jPform3.add(jLabel17);
 
-        jSpinner2.setPreferredSize(new java.awt.Dimension(74, 24));
-        jPanel12.add(jSpinner2);
+        interes3.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        interes3.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
+        interes3.setPreferredSize(new java.awt.Dimension(74, 24));
+        interes3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                interes3KeyTyped(evt);
+            }
+        });
+        jPform3.add(interes3);
 
+        jLabel11.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
         jLabel11.setText("    Nombre de acreedor");
-        jLabel11.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 153, 255)));
+        jLabel11.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
         jLabel11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel12.add(jLabel11);
+        jPform3.add(jLabel11);
 
-        jTextField12.setPreferredSize(new java.awt.Dimension(120, 24));
-        jPanel12.add(jTextField12);
+        acreedor3.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        acreedor3.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
+        acreedor3.setPreferredSize(new java.awt.Dimension(120, 24));
+        acreedor3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                acreedor3ActionPerformed(evt);
+            }
+        });
+        acreedor3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                acreedor3KeyTyped(evt);
+            }
+        });
+        jPform3.add(acreedor3);
 
+        jLabel18.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
         jLabel18.setText("    Motivo");
-        jLabel18.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 153, 255)));
+        jLabel18.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
         jLabel18.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel12.add(jLabel18);
+        jPform3.add(jLabel18);
 
-        jTextField7.setPreferredSize(new java.awt.Dimension(100, 24));
-        jPanel12.add(jTextField7);
+        motivo3.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        motivo3.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
+        motivo3.setPreferredSize(new java.awt.Dimension(100, 24));
+        motivo3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                motivo3ActionPerformed(evt);
+            }
+        });
+        motivo3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                motivo3KeyTyped(evt);
+            }
+        });
+        jPform3.add(motivo3);
 
+        jLabel15.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
         jLabel15.setText("    Monto");
-        jLabel15.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 153, 255)));
+        jLabel15.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
         jLabel15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel12.add(jLabel15);
+        jPform3.add(jLabel15);
 
-        jSpinner3.setPreferredSize(new java.awt.Dimension(84, 24));
-        jPanel12.add(jSpinner3);
+        monto3.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        monto3.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 0, 2, new java.awt.Color(0, 0, 0)));
+        monto3.setPreferredSize(new java.awt.Dimension(84, 24));
+        monto3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                monto3KeyTyped(evt);
+            }
+        });
+        jPform3.add(monto3);
 
+        jLabel14.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
         jLabel14.setText("    Fecha");
-        jLabel14.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 153, 255)));
+        jLabel14.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
         jLabel14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel12.add(jLabel14);
+        jPform3.add(jLabel14);
 
-        jTextField8.setPreferredSize(new java.awt.Dimension(100, 24));
-        jPanel12.add(jTextField8);
-
-        jLabel29.setText("    id quien registra");
-        jLabel29.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 153, 255)));
-        jLabel29.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel12.add(jLabel29);
-
-        jTextField10.setMinimumSize(new java.awt.Dimension(120, 24));
-        jTextField10.setPreferredSize(new java.awt.Dimension(100, 24));
-        jPanel12.add(jTextField10);
+        fecha3.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        fecha3.setForeground(new java.awt.Color(150, 150, 150));
+        fecha3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        fecha3.setText("YYYY-MM-DD");
+        fecha3.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+        fecha3.setPreferredSize(new java.awt.Dimension(100, 24));
+        fecha3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fecha3MouseClicked(evt);
+            }
+        });
+        fecha3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fecha3ActionPerformed(evt);
+            }
+        });
+        fecha3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                fecha3KeyTyped(evt);
+            }
+        });
+        jPform3.add(fecha3);
 
         jButton11.setBackground(new java.awt.Color(250, 80, 80));
+        jButton11.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
         jButton11.setForeground(new java.awt.Color(255, 255, 255));
         jButton11.setText("Cancelar");
+        jButton11.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton11ActionPerformed(evt);
             }
         });
-        jPanel12.add(jButton11);
+        jPform3.add(jButton11);
 
         jButton2.setBackground(new java.awt.Color(100, 250, 100));
+        jButton2.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(102, 102, 102));
         jButton2.setText("Registrar");
+        jButton2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel12.add(jButton2);
+        jPform3.add(jButton2);
 
-        jPanel5.add(jPanel12);
+        jPcentral.add(jPform3);
 
-        jPanel14.setMinimumSize(new java.awt.Dimension(100, 200));
-        jPanel14.setPreferredSize(new java.awt.Dimension(1190, 300));
-        jPanel14.setLayout(new javax.swing.BoxLayout(jPanel14, javax.swing.BoxLayout.LINE_AXIS));
+        jPdetalles.setMinimumSize(new java.awt.Dimension(100, 200));
+        jPdetalles.setPreferredSize(new java.awt.Dimension(1190, 300));
+        jPdetalles.setLayout(new javax.swing.BoxLayout(jPdetalles, javax.swing.BoxLayout.LINE_AXIS));
 
         jPanel15.setBackground(new java.awt.Color(255, 255, 255));
         jPanel15.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray, java.awt.Color.white, java.awt.Color.white));
+        jPanel15.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
         jPanel15.setPreferredSize(new java.awt.Dimension(78, 304));
         jPanel15.setLayout(new javax.swing.BoxLayout(jPanel15, javax.swing.BoxLayout.Y_AXIS));
 
+        jLabel27.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(20, 20, 20));
         jLabel27.setText("Gastos");
         jPanel15.add(jLabel27);
 
-        jList2.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane2.setViewportView(jList2);
 
         jPanel15.add(jScrollPane2);
 
-        jPanel14.add(jPanel15);
+        jPdetalles.add(jPanel15);
 
         jPanel16.setBackground(new java.awt.Color(255, 255, 255));
         jPanel16.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray, java.awt.Color.white, java.awt.Color.white));
+        jPanel16.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
         jPanel16.setMinimumSize(new java.awt.Dimension(100, 100));
         jPanel16.setPreferredSize(new java.awt.Dimension(300, 184));
         jPanel16.setLayout(new javax.swing.BoxLayout(jPanel16, javax.swing.BoxLayout.Y_AXIS));
 
+        jLabel28.setFont(new java.awt.Font("Linux Libertine Mono O", 0, 14)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(20, 20, 20));
         jLabel28.setText("Deudas");
         jPanel16.add(jLabel28);
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jList1.setPreferredSize(new java.awt.Dimension(50, 100));
-        jScrollPane1.setViewportView(jList1);
+        deudasList.setPreferredSize(new java.awt.Dimension(50, 100));
+        jScrollPane1.setViewportView(deudasList);
 
         jPanel16.add(jScrollPane1);
 
-        jPanel14.add(jPanel16);
+        jPdetalles.add(jPanel16);
 
-        jPanel5.add(jPanel14);
+        jPcentral.add(jPdetalles);
 
-        jPanel1.add(jPanel5, java.awt.BorderLayout.CENTER);
+        PanelPrincipal.add(jPcentral, java.awt.BorderLayout.CENTER);
 
-        getContentPane().add(jPanel1);
+        getContentPane().add(PanelPrincipal);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        jPanel13.setVisible(true);
-      
-        jPanel11.setVisible(false);
-        jPanel12.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnRCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRCActionPerformed
+        jPform1.setVisible(true);
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-       jPanel12.setVisible(true);
-       
-       jPanel11.setVisible(false);
-        jPanel13.setVisible(false);
-    }//GEN-LAST:event_jButton4ActionPerformed
+        jPform2.setVisible(false);
+        jPform3.setVisible(false);
+    }//GEN-LAST:event_btnRCActionPerformed
 
-    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+    private void btnRDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRDActionPerformed
+        jPform3.setVisible(true);
+        jPform2.setVisible(false);
+        jPform1.setVisible(false);
+    }//GEN-LAST:event_btnRDActionPerformed
+
+    private void GoToInMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GoToInMouseClicked
         InicioFrame inicio = new InicioFrame();
         this.setVisible(false);
         inicio.setSize(this.getSize());
+        inicio.setLocation(this.getLocation());
         inicio.setVisible(true);
-    }//GEN-LAST:event_jLabel2MouseClicked
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        jPanel16.setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_GoToInMouseClicked
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-       int answ=JOptionPane.showConfirmDialog(this,"¿Estas seguro de salir?","!?",JOptionPane.YES_NO_OPTION);
-        if(answ==0){
+        int answ = JOptionPane.showConfirmDialog(this, "¿Estas seguro de salir?", "!?", JOptionPane.YES_NO_OPTION);
+        if (answ == 0) {
             System.exit(0);
         }
     }//GEN-LAST:event_formWindowClosing
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        jPanel11.setVisible(true);
-      
-        jPanel13.setVisible(false);
-        jPanel12.setVisible(false);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void btnRGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRGActionPerformed
+        jPform2.setVisible(true);
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        jPform1.setVisible(false);
+        jPform3.setVisible(false);
+    }//GEN-LAST:event_btnRGActionPerformed
+    private void clearTxt(){
+        descripcion1.setText("");
+        fecha1.setText("");
+        fecha2.setText("");
+        descripcion2.setText("");
+        acreedor3.setText("");
+        motivo3.setText("");
+        fecha3.setText("");
+        //pone en 0 los spinner's
+        total1.setValue(0);
+        total2.setValue(0);
+        meses.setValue(0);
+        interes3.setValue(0);
+        monto3.setValue(0);
+         
+    }
+    private void btn1CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1CancelarActionPerformed
         //jPanel13.setVisible(false);
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }//GEN-LAST:event_btn1CancelarActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // jPanel13.setVisible(false);
-    }//GEN-LAST:event_jButton10ActionPerformed
+    private void btn1registraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1registraActionPerformed
+        String descripcion = descripcion1.getText(), fecha = fecha1.getText(), metodop = (String) metodo1.getSelectedItem();
+        int total = (int) total1.getValue();
+
+        if (!descripcion.isEmpty() && !fecha.isEmpty() &&total>0 && !metodop.isEmpty()) {
+            if (!metodop.equals("Elegir...")) {
+                Controlador.logica.registraRegistro(compra);
+                int idRegistro = Controlador.logica.endRegister();
+                int t = (int) total1.getValue();
+                double tt = t;
+                Controlador.logica.registrarCompra(idRegistro, tt, (String) metodo1.getSelectedItem(), descripcion1.getText(), fecha1.getText());
+                clearTxt();
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Verifique sus datos de entrada y vuelva a intentarlo");
+        }
+//        
+    }//GEN-LAST:event_btn1registraActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        jPanel11.setVisible(false);
+        jPform2.setVisible(false);
+        clearTxt();
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        jPanel11.setVisible(false);
+        String fecha=fecha2.getText(), metodo=(String)metodo2.getSelectedItem(),descripcion=descripcion2.getText();
+        int total=(int)total2.getValue();
+        if(!fecha.isEmpty()&&!metodo.isEmpty()&&!descripcion.isEmpty()&&total>0){
+            Controlador.logica.registraRegistro(gasto);
+            int idRegistro = Controlador.logica.endRegister();
+            Double valor = ((Number) total2.getValue()).doubleValue();
+            Controlador.logica.registrarGasto(idRegistro, fecha2.getText(), descripcion2.getText(), valor, (String) metodo2.getSelectedItem());
+            clearTxt();
+        }else{
+            JOptionPane.showMessageDialog(null, "Verifique sus datos de entrada y vuelva a intentarlo");
+        }
+
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        jPanel12.setVisible(false);
+        String metodo=(String)metodo3.getSelectedItem(),acreedor=acreedor3.getText(),motivo=motivo3.getText(), fecha=fecha3.getText();
+        int mes=(int)meses.getValue(),interes=(int)interes3.getValue(), monto=(int)monto3.getValue();
+       
+        if(!metodo.isEmpty()&&!acreedor.isEmpty()&&!motivo.isEmpty()&&!fecha.isEmpty()&&mes>0&&interes>0&&monto>0){
+            Controlador.logica.registraRegistro(deuda);
+            int idRegistro = Controlador.logica.endRegister();
+            Controlador.logica.registrarDeuda(idRegistro, motivo3.getText(), fecha3.getText(), (int) monto3.getValue(), (String) metodo3.getSelectedItem(), (int) interes3.getValue(), acreedor3.getText(), (int) meses.getValue());
+            cleanModel2();
+            clearTxt();
+        }else{
+            JOptionPane.showMessageDialog(null, "Verifique sus campos y vuelva intentarlo");
+        }
+        //registro en la tabla deudas
+        //jPform3.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
-
+    private void cleanModel2(){
+        logica.modeloLista2.removeAllElements();
+        deudasList = Controlador.logica.consultaDeudas(deudasList);
+    }
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        jPanel12.setVisible(false);
+        jPform3.setVisible(false);
+        clearTxt();
     }//GEN-LAST:event_jButton11ActionPerformed
 
+    private void labelTresP1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelTresP1MouseClicked
+        config.setAlwaysOnTop(true); // Siempre encima
+        config.setSize(442, 218);
+        config.setLocationRelativeTo(null); // Centrar el diálogo
+        config.setVisible(true);
+
+    }//GEN-LAST:event_labelTresP1MouseClicked
+
+    private void labelTresP1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelTresP1MouseEntered
+        labelTresP1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/TresPBlack.png")));
+    }//GEN-LAST:event_labelTresP1MouseEntered
+
+    private void labelTresP1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelTresP1MouseExited
+
+        labelTresP1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/TresPWhiteN.png")));
+    }//GEN-LAST:event_labelTresP1MouseExited
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Principal p = new Principal();
+        p.edit.doClick();
+        p.setSize(1, 1);
+        config.setVisible(false);
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+    private void llenaPerfil() {
+
+    }
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        Login log = new Login();
+        log.setVisible(true);
+        config.setVisible(false);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void userMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userMouseClicked
+        Conta.config.setAlwaysOnTop(true); // Siempre encima
+        Conta.config.setSize(442, 218);
+        Conta.config.setLocationRelativeTo(null); // Centrar el diálogo
+        Conta.config.setVisible(true);
+    }//GEN-LAST:event_userMouseClicked
+
+    private void userMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userMouseEntered
+
+    }//GEN-LAST:event_userMouseEntered
+
+    private void userMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userMouseExited
+
+    }//GEN-LAST:event_userMouseExited
+
+    private void descripcion1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_descripcion1KeyTyped
+        String texto = descripcion1.getText();
+        if (!texto.matches(logica.descripciones)) {
+            // Filtrar solo los caracteres válidos
+            descripcion1.setText(texto.replaceAll("[^" + logica.descripciones.replace("^", "").replace("+", "") + "]", ""));
+        }
+    }//GEN-LAST:event_descripcion1KeyTyped
+
+    private void fecha1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fecha1KeyTyped
+        char c = evt.getKeyChar();
+
+        // Solo permitir números y controlar la longitud
+        if (!Character.isDigit(c) || fecha1.getText().length() >= 10) {
+            evt.consume(); // Bloquea la entrada inválida
+            return;
+        }
+        String texto = fecha1.getText();
+
+        // Agregar '/' automáticamente en la posición correcta
+        if ((texto.length() == 4 || texto.length() == 7) && c != '-') {
+            fecha1.setText(texto + "-");
+        }
+    }//GEN-LAST:event_fecha1KeyTyped
+
+    private void total1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_total1KeyTyped
+        
+        String texto = (String) total1.getValue();
+        if (!texto.matches(logica.precios)) {
+            // Filtrar solo los caracteres válidos
+            total1.setValue(Double.parseDouble(texto.replaceAll("[^" + logica.precios.replace("^", "").replace("+", "") + "]", "")));
+        }
+    }//GEN-LAST:event_total1KeyTyped
+
+    private void fecha2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fecha2KeyTyped
+        char c = evt.getKeyChar();
+
+        // Solo permitir números y controlar la longitud
+        if (!Character.isDigit(c) || fecha2.getText().length() >= 10) {
+            evt.consume(); // Bloquea la entrada inválida
+            return;
+        }
+        String texto = fecha2.getText();
+
+        // Agregar '/' automáticamente en la posición correcta
+        if ((texto.length() == 4 || texto.length() == 7) && c != '-') {
+            fecha2.setText(texto + "-");
+        }
+    }//GEN-LAST:event_fecha2KeyTyped
+
+    private void fecha1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fecha1MouseClicked
+        fecha1.setText("");
+    }//GEN-LAST:event_fecha1MouseClicked
+
+    private void fecha3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fecha3KeyTyped
+        char c = evt.getKeyChar();
+
+        // Solo permitir números y controlar la longitud
+        if (!Character.isDigit(c) || fecha3.getText().length() >= 10) {
+            evt.consume(); // Bloquea la entrada inválida
+            return;
+        }
+        String texto = fecha3.getText();
+
+        // Agregar '/' automáticamente en la posición correcta
+        if ((texto.length() == 4 || texto.length() == 7) && c != '-') {
+            fecha3.setText(texto + "-");
+        }
+    }//GEN-LAST:event_fecha3KeyTyped
+
+    private void total2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_total2KeyTyped
+        String texto = (String) total2.getValue();
+        if (!texto.matches(logica.precios)) {
+            // Filtrar solo los caracteres válidos
+            total2.setValue(Double.parseDouble(texto.replaceAll("[^" + logica.precios.replace("^", "").replace("+", "") + "]", "")));
+        }    }//GEN-LAST:event_total2KeyTyped
+
+    private void mesesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_mesesKeyTyped
+        String texto = (String) meses.getValue();
+        if (!texto.matches(logica.cantidades)) {
+            // Filtrar solo los caracteres válidos
+            meses.setValue(Double.parseDouble(texto.replaceAll("[^" + logica.cantidades.replace("^", "").replace("+", "") + "]", "")));
+        }
+    }//GEN-LAST:event_mesesKeyTyped
+
+    private void interes3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_interes3KeyTyped
+        String texto = (String) interes3.getValue();
+        if (!texto.matches(logica.precios)) {
+            // Filtrar solo los caracteres válidos
+            interes3.setValue(Double.parseDouble(texto.replaceAll("[^" + logica.precios.replace("^", "").replace("+", "") + "]", "")));
+        }
+    }//GEN-LAST:event_interes3KeyTyped
+
+    private void monto3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_monto3KeyTyped
+        String texto = (String) monto3.getValue();
+        if (!texto.matches(logica.precios)) {
+            // Filtrar solo los caracteres válidos
+            monto3.setValue(Double.parseDouble(texto.replaceAll("[^" + logica.precios.replace("^", "").replace("+", "") + "]", "")));
+        }
+    }//GEN-LAST:event_monto3KeyTyped
+
+    private void descripcion2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_descripcion2KeyTyped
+        String texto = descripcion2.getText();
+        if (!texto.matches(logica.descripciones)) {
+            // Filtrar solo los caracteres válidos
+            descripcion2.setText(texto.replaceAll("[^" + logica.descripciones.replace("^", "").replace("+", "") + "]", ""));
+        }
+    }//GEN-LAST:event_descripcion2KeyTyped
+
+    private void motivo3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_motivo3KeyTyped
+         String texto = motivo3.getText();
+        if (!texto.matches(logica.descripciones)) {
+            // Filtrar solo los caracteres válidos
+            motivo3.setText(texto.replaceAll("[^" + logica.descripciones.replace("^", "").replace("+", "") + "]", ""));
+        }
+    }//GEN-LAST:event_motivo3KeyTyped
+
+    private void acreedor3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_acreedor3KeyTyped
+        String texto = acreedor3.getText();
+        if (!texto.matches(logica.nombress)) {
+            // Filtrar solo los caracteres válidos
+            acreedor3.setText(texto.replaceAll("[^" + logica.nombress.replace("^", "").replace("+", "") + "]", ""));
+        }
+    }//GEN-LAST:event_acreedor3KeyTyped
+
+    private void metodo1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_metodo1KeyTyped
+      
+    }//GEN-LAST:event_metodo1KeyTyped
+
+    private void fecha2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fecha2MouseClicked
+        fecha2.setText("");
+    }//GEN-LAST:event_fecha2MouseClicked
+
+    private void fecha3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fecha3MouseClicked
+       fecha3.setText("");
+    }//GEN-LAST:event_fecha3MouseClicked
+
+    private void btnEDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEDActionPerformed
+        if(deudasList.getSelectedIndex()!=-1){
+            int index=deudasList.getSelectedIndex();
+            String select=deudasList.getSelectedValue();
+            String []sp=select.split("_");
+            int ids=Integer.parseInt(sp[1]);
+            logica.deleteDeudaId(ids);
+            deudasList.setModel(logica.modeloLista2);
+            cleanModel2();
+        }else{
+            JOptionPane.showMessageDialog(null, "Debes seleccionar una deuda","Sugerencia",JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_btnEDActionPerformed
+
+    private void fecha3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fecha3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fecha3ActionPerformed
+
+    private void btnRD1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRD1ActionPerformed
+        Inventario inv = new Inventario();
+        inv.setLocation(this.getLocation());
+        inv.setSize(this.getSize());
+        inv.setVisible(true);
+        this.setVisible(false);
+        String[] ps=Conexion.getPassword().split("_");
+        if(!ps[1].equals("ct")){
+            inv.jLabel12.setVisible(false);
+        }
+        inv.returnConta.setVisible(true);
+        
+    }//GEN-LAST:event_btnRD1ActionPerformed
+
+    private void descripcion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descripcion1ActionPerformed
+       fecha1.requestFocus();
+    }//GEN-LAST:event_descripcion1ActionPerformed
+
+    private void fecha1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fecha1ActionPerformed
+       total1.requestFocus();
+    }//GEN-LAST:event_fecha1ActionPerformed
+
+    private void fecha2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fecha2ActionPerformed
+       total2.requestFocus();
+    }//GEN-LAST:event_fecha2ActionPerformed
+
+    private void total2AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_total2AncestorAdded
+        descripcion2.requestFocus();
+    }//GEN-LAST:event_total2AncestorAdded
+
+    private void acreedor3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acreedor3ActionPerformed
+        motivo3.requestFocus();
+    }//GEN-LAST:event_acreedor3ActionPerformed
+
+    private void motivo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_motivo3ActionPerformed
+        fecha3.requestFocus();
+    }//GEN-LAST:event_motivo3ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static javax.swing.JLabel GoToIn;
+    private javax.swing.JPanel PanelPrincipal;
+    private javax.swing.JTextField acreedor3;
+    private javax.swing.JPanel botones;
+    private javax.swing.JButton btn1Cancelar;
+    private javax.swing.JButton btn1registra;
+    private javax.swing.JButton btnED;
+    private javax.swing.JButton btnRC;
+    private javax.swing.JButton btnRD;
+    private javax.swing.JButton btnRD1;
+    private javax.swing.JButton btnRG;
+    public static javax.swing.JDialog config;
+    private javax.swing.JTextField descripcion1;
+    private javax.swing.JTextField descripcion2;
+    private javax.swing.JList<String> deudasList;
+    private javax.swing.JTextField fecha1;
+    private javax.swing.JTextField fecha2;
+    private javax.swing.JTextField fecha3;
+    private javax.swing.JSpinner interes3;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jL1MP;
+    private javax.swing.JLabel jL1TP;
+    private javax.swing.JLabel jL1descripcion;
+    private javax.swing.JLabel jL1fecha;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JList<String> jList2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPcentral;
+    private javax.swing.JPanel jPdetalles;
+    private javax.swing.JPanel jPform1;
+    private javax.swing.JPanel jPform2;
+    private javax.swing.JPanel jPform3;
+    private javax.swing.JPanel jPizquierdo;
+    private javax.swing.JPanel jPnombre;
+    private javax.swing.JPanel jPsuper;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JSpinner jSpinner2;
-    private javax.swing.JSpinner jSpinner3;
-    private javax.swing.JSpinner jSpinner4;
-    private javax.swing.JSpinner jSpinner5;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    public static javax.swing.JLabel labelTresP1;
+    private javax.swing.JSpinner meses;
+    private javax.swing.JComboBox<String> metodo1;
+    private javax.swing.JComboBox<String> metodo2;
+    private javax.swing.JComboBox<String> metodo3;
+    private javax.swing.JSpinner monto3;
+    private javax.swing.JTextField motivo3;
+    private javax.swing.JSpinner total1;
+    private javax.swing.JSpinner total2;
+    public static javax.swing.JLabel user;
+    private javax.swing.JLabel vacio;
+    private javax.swing.JLabel vacio2;
     // End of variables declaration//GEN-END:variables
 }
