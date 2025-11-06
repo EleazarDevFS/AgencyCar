@@ -1,0 +1,450 @@
+========================================
+                AGENCY SPEED            
+            FACTURA DE VENTA            
+========================================
+Fecha: 2025-01-29
+----------------------------------------
+            DATOS DEL CLIENTE            
+ID Cliente: HAUGUSGSUGSUSGUSGU
+Nombre: Ester Ramirez Ramos
+Teléfono: 9899797668
+Dirección: Coyoacos
+----------------------------------------
+          DETALLES DE LA COMPRA          
+ID Auto: 24WX6789TUV012345
+Nombre: Travel Edition
+Tipo: SUV
+Marca: Chevrolet
+Color: Gray
+Año: 2021
+Modelo: Traverse
+Cantidad: 1
+Precio Unitario: $700000.0
+Subtotal: $700000.0
+Descuento: $2000.0
+----------------------------------------
+Monto Total: $698000.0
+----------------------------------------
+Firma del Vendedor: ________________
+Firma del Cliente: ________________
+
+========================================
+                AGENCY SPEED            
+            FACTURA DE VENTA            
+========================================
+Fecha: 2025-01-29
+----------------------------------------
+            DATOS DEL CLIENTE            
+ID Cliente: SISHIHSISHISHISHSK
+Nombre: Estela Ramirez Rodriguiex
+Teléfono: 9899797668
+Dirección: Coyoaco
+----------------------------------------
+          DETALLES DE LA COMPRA          
+ID Auto: 27CD6789CDE012345
+Nombre: Electric SUV
+Tipo: SUV
+Marca: Tesla
+Color: Black
+Año: 2023
+Modelo: Model Y
+Cantidad: 1
+Precio Unitario: $1000000.0
+Subtotal: $1000000.0
+Descuento: $2000.0
+----------------------------------------
+Monto Total: $998000.0
+----------------------------------------
+Firma del Vendedor: ________________
+Firma del Cliente: ________________
+
+========================================
+                AGENCY SPEED            
+            FACTURA DE VENTA            
+========================================
+Fecha: 2025-01-29
+----------------------------------------
+            DATOS DEL CLIENTE            
+ID Cliente: HISHISBISBISBISNIS
+Nombre: Eleonor Garcia Nuñez
+Teléfono: 0908786678
+Dirección: Calle cTR
+----------------------------------------
+          DETALLES DE LA COMPRA          
+ID Auto: 23UV3456QRS789012
+Nombre: Eco Drive
+Tipo: SUV
+Marca: Kia
+Color: Green
+Año: 2022
+Modelo: Seltos
+Cantidad: 1
+Precio Unitario: $520000.0
+Subtotal: $520000.0
+Descuento: $2000.0
+----------------------------------------
+Monto Total: $518000.0
+----------------------------------------
+Firma del Vendedor: ________________
+Firma del Cliente: ________________
+
+========================================
+                AGENCY SPEED            
+            FACTURA DE VENTA            
+========================================
+Fecha: 2025-01-30
+----------------------------------------
+            DATOS DEL CLIENTE            
+ID Cliente: HIHIIHIHSHSIHSISHI
+Nombre: Pedro Santos Jarquin
+Teléfono: 7876868656
+Dirección: el oocte
+----------------------------------------
+          DETALLES DE LA COMPRA          
+ID Auto: 28EF0123FGH456789
+Nombre: Performance
+Tipo: Sedán
+Marca: BMW
+Color: Red
+Año: 2021
+Modelo: 3 Series
+Cantidad: 1
+Precio Unitario: $800000.0
+Subtotal: $800000.0
+Descuento: $2000.0
+----------------------------------------
+Monto Total: $798000.0
+----------------------------------------
+Firma del Vendedor: ________________
+Firma del Cliente: ________________
+
+========================================
+                AGENCY SPEED            
+            FACTURA DE VENTA            
+========================================
+Fecha: 2025-01-30
+----------------------------------------
+            DATOS DEL CLIENTE            
+ID Cliente: JOODODHODHODHODJDO
+Nombre: Eliu Santos Ramirez
+Teléfono: 9829793937
+Dirección: UYUYYUYU
+----------------------------------------
+          DETALLES DE LA COMPRA          
+ID Auto: 29GH3456HIJ789012
+Nombre: Prestige
+Tipo: SUV
+Marca: Audi
+Color: Gray
+Año: 2022
+Modelo: Q7
+Cantidad: 1
+Precio Unitario: $1100000.0
+Subtotal: $1100000.0
+Descuento: $0.0
+----------------------------------------
+Monto Total: $1100000.0
+----------------------------------------
+Firma del Vendedor: ________________
+Firma del Cliente: ________________
+
+========================================
+                AGENCY SPEED            
+            FACTURA DE VENTA            
+========================================
+Fecha: 2025-01-30
+----------------------------------------
+            DATOS DEL CLIENTE            
+ID Cliente: HAIHAIHAIHIAHIHIAH
+Nombre: Hernan Ramirez Benitez
+Teléfono: 9897397973
+Dirección: LLuviiai
+----------------------------------------
+          DETALLES DE LA COMPRA          
+ID Auto: 6MN5678STU9012345
+Nombre: Classic S
+Tipo: Sedán
+Marca: Volkswagen
+Color: Silver
+Año: 2016
+Modelo: Jetta
+Cantidad: 1
+Precio Unitario: $300000.0
+Subtotal: $300000.0
+Descuento: $0.0
+----------------------------------------
+Monto Total: $300000.0
+----------------------------------------
+Firma del Vendedor: ________________
+Firma del Cliente: ________________
+
+========================================
+                AGENCY SPEED            
+            FACTURA DE VENTA            
+========================================
+Fecha: 2025-01-30
+----------------------------------------
+            DATOS DEL CLIENTE            
+ID Cliente: CHAIHSISISHISSHIHS
+Nombre: Elena Ramires Hernans
+Teléfono: 8979679798
+Dirección: Tunillo
+----------------------------------------
+          DETALLES DE LA COMPRA          
+ID Auto: 7OP9012VWX3456789
+Nombre: Dynamic
+Tipo: SUV
+Marca: Kia
+Color: Blue
+Año: 2021
+Modelo: Sportage
+Cantidad: 1
+Precio Unitario: $480000.0
+Subtotal: $480000.0
+Descuento: $0.0
+----------------------------------------
+Monto Total: $480000.0
+----------------------------------------
+Firma del Vendedor: ________________
+Firma del Cliente: ________________
+
+========================================
+                AGENCY SPEED            
+            FACTURA DE VENTA            
+========================================
+Fecha: 2025-01-30
+----------------------------------------
+            DATOS DEL CLIENTE            
+ID Cliente: JSHISHSIHSIKJIHIHI
+Nombre: Chalino Snachez Mata
+Teléfono: 8785858588
+Dirección: Colorado
+----------------------------------------
+          DETALLES DE LA COMPRA          
+ID Auto: 25YZ0123WXY456789
+Nombre: Active
+Tipo: SUV
+Marca: Ford
+Color: Blue
+Año: 2020
+Modelo: EcoSport
+Cantidad: 1
+Precio Unitario: $400000.0
+Subtotal: $400000.0
+Descuento: $0.0
+----------------------------------------
+Monto Total: $400000.0
+----------------------------------------
+Firma del Vendedor: ________________
+Firma del Cliente: ________________
+
+========================================
+                AGENCY SPEED            
+            FACTURA DE VENTA            
+========================================
+Fecha: 2025-01-30
+----------------------------------------
+            DATOS DEL CLIENTE            
+ID Cliente: HDIHDIOHODIHIDHIDH
+Nombre: Daniel B Pacheco Rios
+Teléfono: 9389739737
+Dirección: Diosa c
+----------------------------------------
+          DETALLES DE LA COMPRA          
+ID Auto: 18KL6789CDE012345
+Nombre: Urban Style
+Tipo: SUV
+Marca: Honda
+Color: Gray
+Año: 2020
+Modelo: HR-V
+Cantidad: 1
+Precio Unitario: $500000.0
+Subtotal: $500000.0
+Descuento: $5000.0
+----------------------------------------
+Monto Total: $495000.0
+----------------------------------------
+Firma del Vendedor: ________________
+Firma del Cliente: ________________
+
+========================================
+                AGENCY SPEED            
+            FACTURA DE VENTA            
+========================================
+Fecha: 2025-01-30
+----------------------------------------
+            DATOS DEL CLIENTE            
+ID Cliente: DANE89DHHD98989898
+Nombre: Daniel B Pinacho Suarez
+Teléfono: 9753534543
+Dirección: Diosa Geovanny
+----------------------------------------
+          DETALLES DE LA COMPRA          
+ID Auto: 12YZ6789KLM012345
+Nombre: Adventure Pro
+Tipo: Wagon
+Marca: Subaru
+Color: Brown
+Año: 2020
+Modelo: Outback
+Cantidad: 1
+Precio Unitario: $500000.0
+Subtotal: $500000.0
+Descuento: $0.0
+----------------------------------------
+Monto Total: $500000.0
+----------------------------------------
+Firma del Vendedor: ________________
+Firma del Cliente: ________________
+
+========================================
+                AGENCY SPEED            
+            FACTURA DE VENTA            
+========================================
+Fecha: 2025-01-30
+----------------------------------------
+            DATOS DEL CLIENTE            
+ID Cliente: JAUNAUHSUGSUUSUSUY
+Nombre: Joan Chalini Berna
+Teléfono: 9783974749
+Dirección: El Ocote
+----------------------------------------
+          DETALLES DE LA COMPRA          
+ID Auto: 7OP9012VWX3456789
+Nombre: Dynamic
+Tipo: SUV
+Marca: Kia
+Color: Blue
+Año: 2021
+Modelo: Sportage
+Cantidad: 1
+Precio Unitario: $480000.0
+Subtotal: $480000.0
+Descuento: $0.0
+----------------------------------------
+Monto Total: $480000.0
+----------------------------------------
+Firma del Vendedor: ________________
+Firma del Cliente: ________________
+
+========================================
+                AGENCY SPEED            
+            FACTURA DE VENTA            
+========================================
+Fecha: 2025-01-30
+----------------------------------------
+            DATOS DEL CLIENTE            
+ID Cliente: JARE040623HOCRMLA1
+Nombre: Eleazar Jarquin Ramos
+Teléfono: 9513428553
+Dirección: El Ocote
+----------------------------------------
+          DETALLES DE LA COMPRA          
+ID Auto: 25YZ0123WXY456789
+Nombre: Active
+Tipo: SUV
+Marca: Ford
+Color: Blue
+Año: 2020
+Modelo: EcoSport
+Cantidad: 1
+Precio Unitario: $400000.0
+Subtotal: $400000.0
+Descuento: $0.0
+----------------------------------------
+Monto Total: $400000.0
+----------------------------------------
+Firma del Vendedor: ________________
+Firma del Cliente: ________________
+
+========================================
+                AGENCY SPEED            
+            FACTURA DE VENTA            
+========================================
+Fecha: 2025-01-30
+----------------------------------------
+            DATOS DEL CLIENTE            
+ID Cliente: JARE040623HOCRMLA1
+Nombre: Eleazar Jarquin Ramos
+Teléfono: 9513428553
+Dirección: El Ocote
+----------------------------------------
+          DETALLES DE LA COMPRA          
+ID Auto: 8QR3456YZA7890123
+Nombre: Smart Plus
+Tipo: SUV
+Marca: Hyundai
+Color: Green
+Año: 2023
+Modelo: Tucson
+Cantidad: 1
+Precio Unitario: $520000.0
+Subtotal: $520000.0
+Descuento: $0.0
+----------------------------------------
+Monto Total: $520000.0
+----------------------------------------
+Firma del Vendedor: ________________
+Firma del Cliente: ________________
+
+========================================
+                AGENCY SPEED            
+            FACTURA DE VENTA            
+========================================
+Fecha: 2025-01-31
+----------------------------------------
+            DATOS DEL CLIENTE            
+ID Cliente: GELH030505HOCRPA8
+Nombre: fgffgfg gffg fggf
+Teléfono: 3234545454
+Dirección: fggf
+----------------------------------------
+          DETALLES DE LA COMPRA          
+ID Auto: 8QR3456YZA7890123
+Nombre: Smart Plus
+Tipo: SUV
+Marca: Hyundai
+Color: Green
+Año: 2023
+Modelo: Tucson
+Cantidad: 1
+Precio Unitario: $520000.0
+Subtotal: $520000.0
+Descuento: $0.0
+----------------------------------------
+Monto Total: $520000.0
+----------------------------------------
+Firma del Vendedor: ________________
+Firma del Cliente: ________________
+
+========================================
+                AGENCY SPEED            
+            FACTURA DE VENTA            
+========================================
+Fecha: 2025-01-31
+----------------------------------------
+            DATOS DEL CLIENTE            
+ID Cliente: PAAE870602HOCCNV04
+Nombre: DFFDDFDFDFDF DFDFDFDF DFDFDF
+Teléfono: 3232323223
+Dirección: DFDFFDDFDFDF
+----------------------------------------
+          DETALLES DE LA COMPRA          
+ID Auto: 20OP3456HIJ789012
+Nombre: Family Pack
+Tipo: SUV
+Marca: Hyundai
+Color: White
+Año: 2023
+Modelo: Santa Fe
+Cantidad: 1
+Precio Unitario: $650000.0
+Subtotal: $650000.0
+Descuento: $0.0
+----------------------------------------
+Monto Total: $650000.0
+----------------------------------------
+Firma del Vendedor: ________________
+Firma del Cliente: ________________
+

@@ -1,0 +1,29 @@
+========================================
+                AGENCY SPEED            
+            FACTURA DE VENTA            
+========================================
+Fecha: 2025-01-31
+----------------------------------------
+            DATOS DEL CLIENTE            
+ID Cliente: PAAE870602HOCCNV04
+Nombre: DFFDDFDFDFDF DFDFDFDF DFDFDF
+Teléfono: 3232323223
+Dirección: DFDFFDDFDFDF
+----------------------------------------
+          DETALLES DE LA COMPRA          
+ID Auto: 20OP3456HIJ789012
+Nombre: Family Pack
+Tipo: SUV
+Marca: Hyundai
+Color: White
+Año: 2023
+Modelo: Santa Fe
+Cantidad: 1
+Precio Unitario: $650000.0
+Subtotal: $650000.0
+Descuento: $0.0
+----------------------------------------
+Monto Total: $650000.0
+----------------------------------------
+Firma del Vendedor: ________________
+Firma del Cliente: ________________
