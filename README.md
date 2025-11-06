@@ -1,5 +1,17 @@
 # AgencyCar506 🚗
 
+> [!IMPORTANT]
+> **Este proyecto es completamente educativo y de desarrollo local.**
+> 
+> - ❌ NO pertenece a ninguna empresa real
+> - ❌ NO contiene datos reales de ninguna organización
+> - ❌ NO afecta a ningún sistema en producción
+> - ✅ Todos los datos son ficticios y de prueba
+> - ✅ Se ejecuta completamente en LOCAL
+> - ✅ Es únicamente con fines de aprendizaje y demostración
+> 
+> **Toda la información, credenciales y datos mostrados son ejemplos para desarrollo.**
+
 Sistema de Gestión para Agencia de Vehículos desarrollado en Java con PostgreSQL.
 
 ## 🚀 Inicio Rápido
@@ -207,3 +219,7 @@ Para contribuir al proyecto:
 **Desarrollado por**: EleazarDevFS  
 **Repositorio**: [AgencyCar](https://github.com/EleazarDevFS/AgencyCar)  
 **Branch**: BackendA1
+```markdown
+Usuario:    admin_adm
+Contraseña: admin123_adm
+```
