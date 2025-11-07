@@ -218,7 +218,7 @@ Para contribuir al proyecto:
 
 **Desarrollado por**: EleazarDevFS  
 **Repositorio**: [AgencyCar](https://github.com/EleazarDevFS/AgencyCar)  
-**Branch**: BackendA1
+**Branch**: main
 ```markdown
 Usuario:    admin_adm
 Contraseña: admin123_adm
